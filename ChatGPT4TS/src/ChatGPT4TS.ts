@@ -25,7 +25,7 @@ export class ChatGPT4TS extends IntuifaceElement {
     * Choices List
     */
     @Property({
-        displayName: 'List Messages',
+        displayName: 'Messages sent/received',
         readOnly: true,
         defaultValue: [],
         type: Array,
@@ -38,7 +38,7 @@ export class ChatGPT4TS extends IntuifaceElement {
      * API Key
      */
     @Property({
-        displayName: 'Open AI API Key',
+        displayName: 'OpenAI API Key',
         defaultValue: '',
         type: String,
     })
