@@ -64,7 +64,7 @@ export class ChatGPT4TS extends IntuifaceElement {
     @Trigger({
         name: 'responseReceived',
         displayName: 'Response received',
-        description: 'Raised when GPT API has responded'
+        description: ''
     })
     public responseReceived(@Parameter({
         name: 'response',
@@ -80,7 +80,7 @@ export class ChatGPT4TS extends IntuifaceElement {
     @Trigger({
         name: 'errorReceived',
         displayName: 'Error message received',
-        description: 'Raised when GPT API has responded with an error.'
+        description: ''
     })
     public errorReceived(@Parameter({
         name: 'errorMessage',
