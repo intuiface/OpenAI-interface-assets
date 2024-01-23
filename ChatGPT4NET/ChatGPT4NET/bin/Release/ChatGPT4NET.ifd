@@ -1,0 +1,154 @@
+{
+  "kind": "discovery#restDescription",
+  "discoveryVersion": "v1",
+  "id": "ChatGPT4NET",
+  "name": "ChatGPT4NET",
+  "version": "1.0",
+  "protocol": "dll",
+  "baseUrl": null,
+  "if.category":  "OpenAI",
+  "basePath": "ChatGPT4NET",
+  "auth": {},
+  "dependencies": [
+    "ChatGPT4NET.dll",
+    "Microsoft.Bcl.AsyncInterfaces.dll",
+    "Microsoft.Extensions.Configuration.Abstractions.dll",
+    "Microsoft.Extensions.Configuration.Binder.dll",
+    "Microsoft.Extensions.Configuration.dll",
+    "Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+    "Microsoft.Extensions.Http.dll",
+    "Microsoft.Extensions.Logging.Abstractions.dll",
+    "Microsoft.Extensions.Logging.dll",
+    "Microsoft.Extensions.Options.dll",
+    "Microsoft.Extensions.Primitives.dll",
+    "Newtonsoft.Json.dll",
+    "OpenAI_API.dll",
+    "System.Buffers.dll",
+    "System.Memory.dll",
+    "System.Numerics.Vectors.dll",
+    "System.Runtime.CompilerServices.Unsafe.dll",
+    "System.Threading.Tasks.Extensions.dll"
+  ],
+  "schemas": {
+    "ChatGPT4NET": {
+      "id": "ChatGPT4NET",
+      "type": "object",
+      "properties": {
+        "APIKey": {
+          "title": "OpenAI API Key",
+          "type": "string",
+          "description": "OpenAI API Key"
+        },
+        "Messages": {
+          "title": "Messages sent/received",
+          "type": "array",
+          "description": "Messages sent/received",
+          "readonly": true,
+          "items": {
+            "$ref": "Message"
+          }
+        }
+      }
+    },
+    "Message": {
+      "id": "Message",
+      "type": "object",
+      "properties": {
+        "Role": {
+          "title": "Role",
+          "type": "string",
+          "description": "Role"
+        },
+        "Content": {
+          "title": "Content",
+          "type": "string",
+          "description": "Content"
+        }
+      }
+    }
+  },
+  "resources": {
+    "ChatGPT4NET": {
+      "title": "ChatGPT - Player on Windows",
+      "isInterfaceAsset": true,
+      "methods": {
+        "clearChatSession": {
+          "title": "Clear chat session",
+          "description": "Clears the existing chat session. The next ‘Send prompt’ will start a new chat.",
+          "response": {
+            "type": "null"
+          }
+        },
+        "textCompletion": {
+          "title": "Send Prompt",
+          "description": "Sends a prompt to the GPT chat model you specify.",
+          "response": {
+            "type": "null"
+          },
+          "parameters": {
+            "message_": {
+              "type": "string",
+              "title": "Prompt",
+              "required": true
+            },
+            "model_": {
+              "type": "string",
+              "title": "Model",
+              "default": "gpt-4",
+              "required": true
+            },
+            "temperature_": {
+              "type": "number",
+              "title": "Temperature",
+              "default": 1,
+              "required": true
+            },
+            "maxTokens_": {
+              "type": "integer",
+              "title": "Maximum Tokens",
+              "default": 20,
+              "required": true
+            }
+          }
+        },
+        "addSystemMessage": {
+          "title": "Specify system guidance",
+          "description": "Adds a system message to every ‘Send prompt’.",
+          "response": {
+            "type": "null"
+          },
+          "parameters": {
+            "message_": {
+              "type": "string",
+              "title": "Message",
+              "required": true
+            }
+          }
+        }
+      },
+      "events": {
+        "MessageReceivedEvent": {
+          "id": "MessageReceivedEvent",
+          "title": "Response received",
+          "properties": {
+            "MessageReceived": {
+              "type": "string",
+              "title": "Content"
+            }
+          }
+        },
+        "ErrorMessageEvent": {
+          "id": "ErrorMessageEvent",
+          "title": "Error message received",
+          "properties": {
+            "ErrorMessage": {
+              "type": "string",
+              "title": "Error message"
+            }
+          }
+        }
+      }
+    },
+    
+  }
+}
