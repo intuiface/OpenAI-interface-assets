@@ -64,7 +64,7 @@ export class ChatGPT4TS extends IntuifaceElement {
     @Trigger({
         name: 'responseReceived',
         displayName: 'Response received',
-        description: ''
+        description: 'Raised when the OpenAI API has returned a response to the latest prompt.'
     })
     public responseReceived(@Parameter({
         name: 'response',
@@ -80,7 +80,7 @@ export class ChatGPT4TS extends IntuifaceElement {
     @Trigger({
         name: 'errorReceived',
         displayName: 'Error message received',
-        description: ''
+        description: 'Raised when the OpenAI API has returned an error.'
     })
     public errorReceived(@Parameter({
         name: 'errorMessage',
@@ -111,8 +111,8 @@ export class ChatGPT4TS extends IntuifaceElement {
      * Ask GPT4 for a chat completion
      */
     @Action({
-        displayName: 'Send Prompt',
-        description: 'Sends a prompt to the GPT chat model you specify.',
+        displayName: 'Send prompt',
+        description: 'Sends a prompt to the GPT model you specify.',
         validate: true
     })
     public async textCompletion(
