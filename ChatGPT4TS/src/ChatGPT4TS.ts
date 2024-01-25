@@ -14,6 +14,7 @@ class rawMessage {
 @Asset({
     name: 'ChatGPT4TS',
     displayName: 'ChatGPT - Player on all other platforms',
+    description: "Use an OpenAI GPT model and OpenAI Chat Completion API to process any prompt or sequence of prompts.",
     category: 'OpenAI',
     behaviors: [],
 })
