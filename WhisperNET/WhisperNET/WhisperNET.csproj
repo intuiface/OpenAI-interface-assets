@@ -74,6 +74,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ErrorMessageEventArgs.cs" />
     <Compile Include="TextEventArgs.cs" />
     <Compile Include="WhisperNET.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
