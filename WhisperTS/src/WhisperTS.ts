@@ -24,7 +24,7 @@ export class WhisperTS extends IntuifaceElement {
     })
     public apiKey: string = '';
 
-    
+
     /**
     * Language
     */
@@ -54,13 +54,16 @@ export class WhisperTS extends IntuifaceElement {
     public initialize(configuration: any) {
         super.initialize(configuration);
 
-        navigator.mediaDevices.getUserMedia({
-            audio: true
-        })
-            .then(stream => {
-                this.handlerFunction(stream)
+        try {
+            navigator.mediaDevices.getUserMedia({
+                audio: true
             })
-
+                .then(stream => {
+                    this.handlerFunction(stream)
+                })
+        } catch (error) {
+            this.errorReceived('MediaDevices unavailable or permission was refused.')
+        }
     }
 
 
@@ -132,6 +135,12 @@ export class WhisperTS extends IntuifaceElement {
         validate: true
     })
     public startRecording(): void {
+        if (this.rec == undefined)
+        {
+            this.errorReceived('The recording can\'t be started');
+            return;
+        }
+          
         console.log('Start Recording')
 
         this.audioChunks = [];
@@ -144,6 +153,11 @@ export class WhisperTS extends IntuifaceElement {
         validate: true
     })
     public stopRecording(): void {
+        if (this.rec == undefined)
+        {
+            this.errorReceived('The recording can\'t be stopped');
+            return;
+        }
         console.log('Start Recording')
 
         this.rec.stop();
