@@ -135,12 +135,11 @@ export class WhisperTS extends IntuifaceElement {
         validate: true
     })
     public startRecording(): void {
-        if (this.rec == undefined)
-        {
+        if (this.rec == undefined) {
             this.errorReceived('The recording can\'t be started');
             return;
         }
-          
+
         console.log('Start Recording')
 
         this.audioChunks = [];
@@ -153,8 +152,7 @@ export class WhisperTS extends IntuifaceElement {
         validate: true
     })
     public stopRecording(): void {
-        if (this.rec == undefined)
-        {
+        if (this.rec == undefined) {
             this.errorReceived('The recording can\'t be stopped');
             return;
         }
@@ -176,6 +174,11 @@ export class WhisperTS extends IntuifaceElement {
             if (event.data.size > 0) {
                 this.audioChunks.push(event.data);
             }
+        };
+
+        //add error management
+        this.rec.onerror = (event: any) => {
+            this.errorReceived(`Error recording stream: ${event.error.name}`);
         };
 
         //when recording is finished, create the audio blob and send it to OpenAI API. 
