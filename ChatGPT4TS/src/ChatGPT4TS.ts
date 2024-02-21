@@ -1,13 +1,6 @@
 import { Action, Asset, IntuifaceElement, Parameter, Property, Trigger } from '@intuiface/core';
 import { Message } from './Message';
 
-
-class rawMessage {
-    role: string;
-    content: string;
-}
-
-
 /**
  * Custom Interface Asset ChatGPT4TS
  */
@@ -113,8 +106,7 @@ export class ChatGPT4TS extends IntuifaceElement {
      */
     @Action({
         displayName: 'Send prompt',
-        description: 'Sends a prompt to the GPT model you specify.',
-        validate: true
+        description: 'Sends a prompt to the GPT model you specify.'        
     })
     public async textCompletion(
         @Parameter({
@@ -151,9 +143,9 @@ export class ChatGPT4TS extends IntuifaceElement {
 
             const req = 'https://api.openai.com/v1/chat/completions';
 
-            const headers: HeadersInit = {
-                'Authorization': `Bearer ` + this.apiKey,
-                'Content-Type': `application/json`
+            const headers: HeadersInit = {                
+                'Authorization': `Bearer ${this.apiKey}`,
+                'Content-Type': 'application/json'
             }
 
             const userMessage = new Message();
@@ -161,16 +153,9 @@ export class ChatGPT4TS extends IntuifaceElement {
             userMessage.content = message;
             this.listMessages.push(userMessage);
 
-            //create array of raw Messages (not Intuiface Class) to send to the API
-            var rawListMessage: rawMessage[] = [];
-            for (var i in this.listMessages) {
-                const m = new rawMessage();
-                m.role = this.listMessages[i].role;
-                m.content = this.listMessages[i].content;
-                rawListMessage.push(m);
-            }
-
-
+            //create array of raw Messages (not Intuiface Class) to send to the API                        
+            const rawListMessage = this.listMessages.map((m)=> { return {role: m.role, content: m.content}});
+        
             const body = {
                 'model': model,
                 'messages': rawListMessage,
@@ -186,12 +171,9 @@ export class ChatGPT4TS extends IntuifaceElement {
 
             const rawResponse = await fetch(req, opts);
 
-
-           
-
             const json = await rawResponse.json();
 
-            var response: string = '';
+            let response: string = '';
 
             //Catch error response from API 
             if(rawResponse.status != 200){
@@ -205,7 +187,7 @@ export class ChatGPT4TS extends IntuifaceElement {
             //For now, only consider the first response returned by OpenAI
 
             if (json.choices && json.choices.length > 0) {
-                var c = new Message();
+                let c = new Message();
                 c.content = json.choices[0].message.content.replaceAll('\n', '');
                 c.role = json.choices[0].message.role;
                 response = c.content;
@@ -226,8 +208,7 @@ export class ChatGPT4TS extends IntuifaceElement {
    */
     @Action({
         displayName: 'Specify system guidance',
-        description: 'Adds a system message to every ‘Send prompt’.',
-        validate: true
+        description: 'Adds a system message to every ‘Send prompt’.'        
     })
     public addSystemMessage(
         @Parameter({

@@ -1,11 +1,11 @@
-import { Asset, IntuifaceElement, Property } from '@intuiface/core';
+import { Asset, IntuifaceElement, Property, Watchable } from '@intuiface/core';
 
 @Asset({
     name: 'Message',
     category: 'OpenAI',
     behaviors: []
 })
-export class Message extends IntuifaceElement {
+export class Message extends Watchable {
 
 
 @Property({
