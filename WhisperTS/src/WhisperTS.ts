@@ -61,6 +61,9 @@ export class WhisperTS extends IntuifaceElement {
                 .then(stream => {
                     this.handlerFunction(stream)
                 })
+                .catch((err) => {
+                    this.errorReceived(`${err.name}: ${err.message}`);
+                });
         } catch (error) {
             this.errorReceived('MediaDevices unavailable or permission was refused.')
         }
