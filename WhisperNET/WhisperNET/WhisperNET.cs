@@ -59,6 +59,9 @@ namespace WhisperNET
         public delegate void TextEventHandler(object sender, TextEventArgs args);
         public event TextEventHandler transcriptionReceived;
 
+        public delegate void ErrorMessageReceivedEventHandler(object sender, ErrorMessageEventArgs args);
+        public event ErrorMessageReceivedEventHandler ErrorMessageEvent;
+
         #endregion
 
         #region Constructor
@@ -171,7 +174,9 @@ namespace WhisperNET
                 }
                 else
                 {
-                    throw new Exception("Failed to transcribe audio: " + response.ReasonPhrase);
+                    //Raise error trigger
+                    if (this.ErrorMessageEvent != null)
+                        this.ErrorMessageEvent(this, new ErrorMessageEventArgs("Failed to transcribe audio: " + response.ReasonPhrase));
                 }
             }
         }
