@@ -75,6 +75,7 @@
       "title": "ChatGPT - Player on Windows",
       "description": "Use an OpenAI GPT model and OpenAI Chat Completion API to process any prompt or sequence of prompts.",
       "isInterfaceAsset": true,
+      "if.templateDesignAccelerator": "ChatGPT4NET-default.dax",
       "methods": {
         "clearChatSession": {
           "title": "Clear chat session",
