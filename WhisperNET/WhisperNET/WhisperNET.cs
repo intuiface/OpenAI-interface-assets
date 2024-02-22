@@ -177,6 +177,8 @@ namespace WhisperNET
                     //Raise error trigger
                     if (this.ErrorMessageEvent != null)
                         this.ErrorMessageEvent(this, new ErrorMessageEventArgs("Failed to transcribe audio: " + response.ReasonPhrase));
+
+                    return "";
                 }
             }
         }
