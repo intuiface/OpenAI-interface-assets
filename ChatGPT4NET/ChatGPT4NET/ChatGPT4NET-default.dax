@@ -1,0 +1,806 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mashup ApiNumber="28" Name="ChatGPT4NET-default" Description="" Category="OpenAI" Author="Intuiface" AuthorId="Intuiface" Icon="ChatGPT4NET-default.png" OriginalLocalPath=".\Local" OriginalDataPath=".\Data" OriginalProcessID="81620" OriginalXpId="1-1d786e2c-d65d-47f5-9f69-6e3d870c05f1">
+  <MashupPresentation ContextAlias="CURRENT_PRESENTATION" Name="mashup_root_0" OriginalAbsoluteVisualPath="player://visuals/OpenAI-Wording-review">
+    <Presentation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xsi:noNamespaceSchemaLocation="http://schemas.intuilab.com/intuiface/api5/ip.xsd" Name="OpenAI-Wording-review" Id="" DataPath="" Language="" Width="1920" Height="1080" ShowLoadingIndicator="true" Platform="windows" ComposerVersion="7.5.1" ApiNumber="28" MinApiNumber="28" RequiredPlayerWindows="6.4.0" RequiredPlayerTablet="6.4.0" LastModificationDate="2024-02-21T20:41:11.8468773Z" SnapshotPath="player://data/Snapshots/default.png">
+      <Layers />
+      <Spaces />
+      <SharedContracts />
+      <Converters />
+      <ExternalAssets />
+      <Resources />
+      <Sequence />
+    </Presentation>
+  </MashupPresentation>
+  <MashupSpace ContextAlias="CURRENT_SPACE" Name="mashup_root_1" OriginalAbsoluteVisualPath="player://visuals/OpenAI-Wording-review/ChatGPT-Windows DA">
+    <Space Name="ChatGPT-Windows DA" AutoReset="false" />
+  </MashupSpace>
+  <MashupCollection Name="mashup_root_2" OriginalAbsoluteVisualPath="player://visuals/OpenAI-Wording-review/ChatGPT-Windows DA/Layer 1/Default_template_for_ChatGPT-Windows" CreateAsCollectionSibling="true">
+    <Collection Name="Default_template_for_ChatGPT-Windows" Visual="Group" Style="" Container="Static" ContainerStyle="">
+      <Properties>
+        <Property Type="Container" Name="MinWidth"><![CDATA[value:0]]></Property>
+        <Property Type="Container" Name="MinHeight"><![CDATA[value:0]]></Property>
+        <Property Type="Container" Name="MaxWidth"><![CDATA[value:4000]]></Property>
+        <Property Type="Container" Name="MaxHeight"><![CDATA[value:4000]]></Property>
+        <Property Type="Visual" Name="ItemWidth"><![CDATA[value:1200]]></Property>
+        <Property Type="Visual" Name="ItemHeight"><![CDATA[value:600]]></Property>
+        <Property Type="Visual" Name="ShowFeedback"><![CDATA[value:False]]></Property>
+        <Property Type="Container" Name="MinimizedImage"><![CDATA[player://data/DefaultAssets/DefaultMinimized.png]]></Property>
+        <Property Type="Container" Name="MinimizedPressedImage"><![CDATA[player://data/DefaultAssets/DefaultMinimized.png]]></Property>
+        <Property Type="Container" Name="X"><![CDATA[value:960]]></Property>
+        <Property Type="Container" Name="Y"><![CDATA[value:540]]></Property>
+        <Property Type="Visual" Name="InitialWidth"><![CDATA[value:900]]></Property>
+        <Property Type="Container" Name="Width"><![CDATA[value:900]]></Property>
+        <Property Type="Visual" Name="InitialHeight"><![CDATA[value:980]]></Property>
+        <Property Type="Container" Name="Height"><![CDATA[value:980]]></Property>
+        <Property Type="Container" Name="Orientation"><![CDATA[value:0]]></Property>
+      </Properties>
+      <Asset Name="Background 1" Visual="DefaultRectangle" Style="" Container="Default" ContainerStyle="" Domain="value:Rectangle">
+        <Properties>
+          <Property Type="Visual" Name="BorderThickness"><![CDATA[value:0]]></Property>
+          <Property Type="Visual" Name="BorderColor"><![CDATA[value:#00000000]]></Property>
+          <Property Type="Visual" Name="CornerRadius"><![CDATA[value:5]]></Property>
+          <Property Type="Visual" Name="BackgroundColor"><![CDATA[value:#D9D1D1D1]]></Property>
+          <Property Type="Container" Name="X"><![CDATA[value:450]]></Property>
+          <Property Type="Container" Name="Y"><![CDATA[value:490]]></Property>
+          <Property Type="Container" Name="Width"><![CDATA[value:900]]></Property>
+          <Property Type="Container" Name="Height"><![CDATA[value:980]]></Property>
+          <Property Type="Container" Name="Orientation"><![CDATA[value:0]]></Property>
+        </Properties>
+      </Asset>
+      <Asset Name="OpenAI-Logo" Visual="DefaultImage" Style="" Container="Default" ContainerStyle="" Domain="value:Image">
+        <Properties>
+          <Property Type="Domain" Name="Source"><![CDATA[player://resources/193d8d54-5761-4d93-abf7-882cc11fbd03]]></Property>
+          <Property Type="Container" Name="MinimizedImage"><![CDATA[player://data/DefaultAssets/DefaultMinimized.png]]></Property>
+          <Property Type="Container" Name="MinimizedPressedImage"><![CDATA[player://data/DefaultAssets/DefaultMinimized.png]]></Property>
+          <Property Type="Container" Name="X"><![CDATA[value:450]]></Property>
+          <Property Type="Container" Name="Y"><![CDATA[value:42]]></Property>
+          <Property Type="Container" Name="Width"><![CDATA[value:344.41913439635539]]></Property>
+          <Property Type="Container" Name="Height"><![CDATA[value:84]]></Property>
+          <Property Type="Container" Name="Orientation"><![CDATA[value:0]]></Property>
+        </Properties>
+      </Asset>
+      <Asset Name="Group separator Title" Visual="DefaultRectangle" Style="" Container="No resize" ContainerStyle="" Domain="value:Rectangle">
+        <Properties>
+          <Property Type="Visual" Name="BorderThickness"><![CDATA[value:0]]></Property>
+          <Property Type="Visual" Name="BorderColor"><![CDATA[value:#00000000]]></Property>
+          <Property Type="Visual" Name="CornerRadius"><![CDATA[value:0]]></Property>
+          <Property Type="Visual" Name="BackgroundColor"><![CDATA[value:#FF343333]]></Property>
+          <Property Type="Container" Name="X"><![CDATA[value:450]]></Property>
+          <Property Type="Container" Name="Y"><![CDATA[value:138]]></Property>
+          <Property Type="Container" Name="Width"><![CDATA[value:900]]></Property>
+          <Property Type="Container" Name="Height"><![CDATA[value:1]]></Property>
+          <Property Type="Container" Name="Orientation"><![CDATA[value:0]]></Property>
+        </Properties>
+      </Asset>
+      <Collection Name="Group Properties" Visual="Group" Style="" Container="Default" ContainerStyle="">
+        <Properties>
+          <Property Type="Container" Name="X"><![CDATA[value:450]]></Property>
+          <Property Type="Container" Name="Y"><![CDATA[value:349]]></Property>
+          <Property Type="Visual" Name="InitialWidth"><![CDATA[value:900]]></Property>
+          <Property Type="Container" Name="Width"><![CDATA[value:900]]></Property>
+          <Property Type="Visual" Name="InitialHeight"><![CDATA[value:422]]></Property>
+          <Property Type="Container" Name="Height"><![CDATA[value:422]]></Property>
+          <Property Type="Container" Name="Orientation"><![CDATA[value:0]]></Property>
+        </Properties>
+        <Asset Name="PROPERTIES" Visual="DefaultText" Style="" Container="Scale" ContainerStyle="" Domain="value:Text">
+          <Properties>
+            <Property Type="Visual" Name="VerticalAlignment"><![CDATA[value:Center]]></Property>
+            <Property Type="Visual" Name="Font"><![CDATA[value:Verdana]]></Property>
+            <Property Type="Visual" Name="FontColor"><![CDATA[value:#FF333333]]></Property>
+            <Property Type="Domain" Name="Text"><![CDATA[value:PROPERTIES]]></Property>
+            <Property Type="Visual" Name="Bold"><![CDATA[value:False]]></Property>
+            <Property Type="Visual" Name="FontSize"><![CDATA[value:20]]></Property>
+            <Property Type="Visual" Name="Alignment"><![CDATA[value:Left]]></Property>
+            <Property Type="Visual" Name="Italic"><![CDATA[value:False]]></Property>
+            <Property Type="Container" Name="X"><![CDATA[value:227]]></Property>
+            <Property Type="Container" Name="Y"><![CDATA[value:23]]></Property>
+            <Property Type="Container" Name="Width"><![CDATA[value:403]]></Property>
+            <Property Type="Container" Name="Height"><![CDATA[value:36]]></Property>
+            <Property Type="Container" Name="Orientation"><![CDATA[value:0]]></Property>
+          </Properties>
+        </Asset>
+        <Asset Name="OpenAI Key" Visual="DefaultText" Container="Scale" ContainerStyle="" Domain="value:Text">
+          <Properties>
+            <Property Type="Visual" Name="FontColor"><![CDATA[value:#FF262626]]></Property>
+            <Property Type="Visual" Name="Font"><![CDATA[value:Verdana]]></Property>
+            <Property Type="Visual" Name="Bold"><![CDATA[value:False]]></Property>
+            <Property Type="Visual" Name="FontSize"><![CDATA[value:14]]></Property>
+            <Property Type="Visual" Name="Alignment"><![CDATA[value:Left]]></Property>
+            <Property Type="Domain" Name="Text"><![CDATA[value:OpenAI Key]]></Property>
+            <Property Type="Visual" Name="VerticalAlignment"><![CDATA[value:Center]]></Property>
+            <Property Type="Container" Name="X"><![CDATA[value:122]]></Property>
+            <Property Type="Container" Name="Y"><![CDATA[value:60]]></Property>
+            <Property Type="Container" Name="Width"><![CDATA[value:174]]></Property>
+            <Property Type="Container" Name="Height"><![CDATA[value:30]]></Property>
+            <Property Type="Container" Name="Orientation"><![CDATA[value:0]]></Property>
+          </Properties>
+        </Asset>
+        <Asset Name="Messages sentreceiv" Visual="DefaultText" Container="Scale" ContainerStyle="" Domain="value:Text">
+          <Properties>
+            <Property Type="Visual" Name="FontColor"><![CDATA[value:#FF262626]]></Property>
+            <Property Type="Visual" Name="Font"><![CDATA[value:Verdana]]></Property>
+            <Property Type="Visual" Name="Bold"><![CDATA[value:False]]></Property>
+            <Property Type="Visual" Name="FontSize"><![CDATA[value:14]]></Property>
+            <Property Type="Visual" Name="Alignment"><![CDATA[value:Left]]></Property>
+            <Property Type="Domain" Name="Text"><![CDATA[value:Messages sent/received]]></Property>
+            <Property Type="Visual" Name="VerticalAlignment"><![CDATA[value:Center]]></Property>
+            <Property Type="Container" Name="X"><![CDATA[value:136]]></Property>
+            <Property Type="Container" Name="Y"><![CDATA[value:100]]></Property>
+            <Property Type="Container" Name="Width"><![CDATA[value:201]]></Property>
+            <Property Type="Container" Name="Height"><![CDATA[value:30]]></Property>
+            <Property Type="Container" Name="Orientation"><![CDATA[value:0]]></Property>
+          </Properties>
+        </Asset>
+        <Asset Name="Value - OpenAI Key" Visual="Text input" Style="" Container="Scale" ContainerStyle="" Domain="value:Text input">
+          <Attachments>
+            <EventTrigger EventType="Visual" EventName="EnterKeyPressed">
+              <InvokeService Target="mashup://visuals/mashup_root_2/Default_template_for_ChatGPT-Windows/Group%20Properties/Value%20-%20OpenAI%20Key/" Type="Visual" Name="StopEdition" Delay="value:0.0" />
+            </EventTrigger>
+          </Attachments>
+          <Properties>
+            <Property Type="Domain" Name="Text"><![CDATA[value:]]></Property>
+            <Property Type="Visual" Name="Font"><![CDATA[value:Verdana]]></Property>
+            <Property Type="Visual" Name="FontColor"><![CDATA[value:#FF262626]]></Property>
+            <Property Type="Visual" Name="FontSize"><![CDATA[value:14]]></Property>
+            <Property Type="Visual" Name="InstructionFont">
+              <Typeface>
+                <Family>Segoe UI</Family>
+                <Stretch>normal</Stretch>
+                <Weight>400</Weight>
+                <Style>italic</Style>
+              </Typeface>
+            </Property>
+            <Property Type="Visual" Name="InstructionFontSize"><![CDATA[value:25]]></Property>
+            <Property Type="Visual" Name="Keyboard"><![CDATA[value:UNDEFINED]]></Property>
+            <Property Type="Visual" Name="BackgroundColor"><![CDATA[value:#FFBABABA]]></Property>
+            <Property Type="Visual" Name="EditionBackgroundColor"><![CDATA[value:#FFCFCFCF]]></Property>
+            <Property Type="Visual" Name="InstructionFontColor"><![CDATA[value:#FF848484]]></Property>
+            <Property Type="Visual" Name="InstructionItalic"><![CDATA[value:True]]></Property>
+            <Property Type="Visual" Name="Bold"><![CDATA[value:True]]></Property>
+            <Property Type="Visual" Name="SelectionAreaColor"><![CDATA[value:#FF595959]]></Property>
+            <Property Type="Visual" Name="BorderColor"><![CDATA[value:#FFE8E8E8]]></Property>
+            <Property Type="Visual" Name="EditionBorderColor"><![CDATA[value:#FFE8E8E8]]></Property>
+            <Property Type="Container" Name="X"><![CDATA[value:544]]></Property>
+            <Property Type="Container" Name="Y"><![CDATA[value:60]]></Property>
+            <Property Type="Container" Name="Width"><![CDATA[value:639]]></Property>
+            <Property Type="Container" Name="Height"><![CDATA[value:30]]></Property>
+            <Property Type="Container" Name="Orientation"><![CDATA[value:0]]></Property>
+          </Properties>
+        </Asset>
+        <Collection Name="Messages sentreceived" Visual="AssetGrid" Style="" Container="Default" ContainerStyle="">
+          <Properties>
+            <Property Type="Visual" Name="ItemWidth"><![CDATA[value:789]]></Property>
+            <Property Type="Visual" Name="ItemHeight"><![CDATA[value:88]]></Property>
+            <Property Type="Visual" Name="ItemSpacing"><![CDATA[value:5]]></Property>
+            <Property Type="Visual" Name="ShowFeedback"><![CDATA[value:False]]></Property>
+            <Property Type="Container" Name="MinimizedImage"><![CDATA[player://data/DefaultAssets/DefaultMinimized.png]]></Property>
+            <Property Type="Container" Name="MinimizedPressedImage"><![CDATA[player://data/DefaultAssets/DefaultMinimized.png]]></Property>
+            <Property Type="Visual" Name="FillDirection"><![CDATA[value:TopToBottom]]></Property>
+            <Property Type="Visual" Name="BackgroundRadius"><![CDATA[value:0]]></Property>
+            <Property Type="Visual" Name="Axis"><![CDATA[value:Vertical]]></Property>
+            <Property Type="Visual" Name="Columns"><![CDATA[value:1]]></Property>
+            <Property Type="Visual" Name="ShowScrollIndicator"><![CDATA[value:True]]></Property>
+            <Property Type="Visual" Name="ShowControls"><![CDATA[value:False]]></Property>
+            <Property Type="Visual" Name="CenterJustify"><![CDATA[value:False]]></Property>
+            <Property Type="Container" Name="X"><![CDATA[value:453]]></Property>
+            <Property Type="Container" Name="Y"><![CDATA[value:268]]></Property>
+            <Property Type="Container" Name="Width"><![CDATA[value:857]]></Property>
+            <Property Type="Container" Name="Height"><![CDATA[value:275]]></Property>
+            <Property Type="Container" Name="Orientation"><![CDATA[value:0]]></Property>
+            <Property Type="Container" Name="IsVisible"><![CDATA[value:True]]></Property>
+          </Properties>
+          <DataSourceProvider>
+            <DataSource>
+              <Contract Uri="mashup://externals/ChatGPT%20-%20Player%20on%20Windows/Messages" />
+            </DataSource>
+            <Master>
+              <Collection Name="Template for items of Messages sentreceived" Visual="Group" Style="" Container="Default" ContainerStyle="">
+                <Properties>
+                  <Property Type="Visual" Name="ItemWidth"><![CDATA[value:75]]></Property>
+                  <Property Type="Visual" Name="ItemHeight"><![CDATA[value:250]]></Property>
+                  <Property Type="Visual" Name="ShowFeedback"><![CDATA[value:False]]></Property>
+                  <Property Type="Container" Name="MinimizedImage"><![CDATA[player://data/DefaultAssets/DefaultMinimized.png]]></Property>
+                  <Property Type="Container" Name="MinimizedPressedImage"><![CDATA[player://data/DefaultAssets/DefaultMinimized.png]]></Property>
+                  <Property Type="Container" Name="IsVisible"><![CDATA[value:True]]></Property>
+                  <Property Type="Container" Name="MinWidth"><![CDATA[value:50]]></Property>
+                  <Property Type="Container" Name="MinHeight"><![CDATA[value:50]]></Property>
+                  <Property Type="Container" Name="MaxWidth"><![CDATA[value:4000]]></Property>
+                  <Property Type="Container" Name="MaxHeight"><![CDATA[value:4000]]></Property>
+                  <Property Type="Container" Name="X"><![CDATA[value:436]]></Property>
+                  <Property Type="Container" Name="Y"><![CDATA[value:384]]></Property>
+                  <Property Type="Visual" Name="InitialWidth"><![CDATA[value:789]]></Property>
+                  <Property Type="Container" Name="Width"><![CDATA[value:789]]></Property>
+                  <Property Type="Visual" Name="InitialHeight"><![CDATA[value:88]]></Property>
+                  <Property Type="Container" Name="Height"><![CDATA[value:88]]></Property>
+                  <Property Type="Container" Name="Orientation"><![CDATA[value:0]]></Property>
+                </Properties>
+                <Asset Name="Role" Visual="DefaultText" Style="" Container="Scale" ContainerStyle="" Domain="value:Text">
+                  <Properties>
+                    <Property Type="Domain" Name="Text"><![CDATA[current://DomainComponent/Role]]></Property>
+                    <Property Type="Visual" Name="Font">
+                      <Typeface>
+                        <Family>Verdana</Family>
+                        <Stretch>normal</Stretch>
+                        <Weight>400</Weight>
+                        <Style>normal</Style>
+                      </Typeface>
+                    </Property>
+                    <Property Type="Visual" Name="FontSize"><![CDATA[value:16]]></Property>
+                    <Property Type="Visual" Name="FontColor"><![CDATA[value:#FF262626]]></Property>
+                    <Property Type="Visual" Name="VerticalAlignment"><![CDATA[value:Center]]></Property>
+                    <Property Type="Container" Name="MinimizedImage"><![CDATA[player://data/DefaultAssets/DefaultMinimized.png]]></Property>
+                    <Property Type="Container" Name="MinimizedPressedImage"><![CDATA[player://data/DefaultAssets/DefaultMinimized.png]]></Property>
+                    <Property Type="Container" Name="X"><![CDATA[value:104]]></Property>
+                    <Property Type="Container" Name="Y"><![CDATA[value:10]]></Property>
+                    <Property Type="Container" Name="Width"><![CDATA[value:206]]></Property>
+                    <Property Type="Container" Name="Height"><![CDATA[value:20]]></Property>
+                    <Property Type="Container" Name="Orientation"><![CDATA[value:0]]></Property>
+                  </Properties>
+                </Asset>
+                <Asset Name="Content" Visual="DefaultText" Style="" Container="Scale" ContainerStyle="" Domain="value:Text">
+                  <Properties>
+                    <Property Type="Domain" Name="Text"><![CDATA[current://DomainComponent/Content]]></Property>
+                    <Property Type="Visual" Name="Font">
+                      <Typeface>
+                        <Family>Verdana</Family>
+                        <Stretch>normal</Stretch>
+                        <Weight>400</Weight>
+                        <Style>normal</Style>
+                      </Typeface>
+                    </Property>
+                    <Property Type="Visual" Name="FontSize"><![CDATA[value:22]]></Property>
+                    <Property Type="Visual" Name="FontColor"><![CDATA[value:#FF262626]]></Property>
+                    <Property Type="Visual" Name="VerticalAlignment"><![CDATA[value:Top]]></Property>
+                    <Property Type="Container" Name="MinimizedImage"><![CDATA[player://data/DefaultAssets/DefaultMinimized.png]]></Property>
+                    <Property Type="Container" Name="MinimizedPressedImage"><![CDATA[player://data/DefaultAssets/DefaultMinimized.png]]></Property>
+                    <Property Type="Visual" Name="AdaptFontSize" RequiredApi="28.4.5"><![CDATA[value:True]]></Property>
+                    <Property Type="Container" Name="X"><![CDATA[value:395]]></Property>
+                    <Property Type="Container" Name="Y"><![CDATA[value:55]]></Property>
+                    <Property Type="Container" Name="Width"><![CDATA[value:788.99999999999989]]></Property>
+                    <Property Type="Container" Name="Height"><![CDATA[value:59]]></Property>
+                    <Property Type="Container" Name="Orientation"><![CDATA[value:0]]></Property>
+                  </Properties>
+                </Asset>
+              </Collection>
+            </Master>
+          </DataSourceProvider>
+        </Collection>
+      </Collection>
+      <Asset Name="Group separator Top" Visual="DefaultRectangle" Style="" Container="No resize" ContainerStyle="" Domain="value:Rectangle">
+        <Properties>
+          <Property Type="Visual" Name="BorderThickness"><![CDATA[value:0]]></Property>
+          <Property Type="Visual" Name="BorderColor"><![CDATA[value:#00000000]]></Property>
+          <Property Type="Visual" Name="CornerRadius"><![CDATA[value:0]]></Property>
+          <Property Type="Visual" Name="BackgroundColor"><![CDATA[value:#D9343333]]></Property>
+          <Property Type="Container" Name="X"><![CDATA[value:450]]></Property>
+          <Property Type="Container" Name="Y"><![CDATA[value:570]]></Property>
+          <Property Type="Container" Name="Width"><![CDATA[value:900]]></Property>
+          <Property Type="Container" Name="Height"><![CDATA[value:1]]></Property>
+          <Property Type="Container" Name="Orientation"><![CDATA[value:0]]></Property>
+        </Properties>
+      </Asset>
+      <Collection Name="Group Actions" Visual="Group" Style="" Container="Default" ContainerStyle="">
+        <Properties>
+          <Property Type="Container" Name="X"><![CDATA[value:450]]></Property>
+          <Property Type="Container" Name="Y"><![CDATA[value:663]]></Property>
+          <Property Type="Visual" Name="InitialWidth"><![CDATA[value:900]]></Property>
+          <Property Type="Container" Name="Width"><![CDATA[value:900]]></Property>
+          <Property Type="Visual" Name="InitialHeight"><![CDATA[value:185]]></Property>
+          <Property Type="Container" Name="Height"><![CDATA[value:185]]></Property>
+          <Property Type="Container" Name="Orientation"><![CDATA[value:0]]></Property>
+        </Properties>
+        <Asset Name="ACTIONS" Visual="DefaultText" Style="" Container="Scale" ContainerStyle="" Domain="value:Text">
+          <Properties>
+            <Property Type="Visual" Name="VerticalAlignment"><![CDATA[value:Center]]></Property>
+            <Property Type="Visual" Name="Font"><![CDATA[value:Verdana]]></Property>
+            <Property Type="Visual" Name="FontColor"><![CDATA[value:#FF333333]]></Property>
+            <Property Type="Domain" Name="Text"><![CDATA[value:ACTIONS]]></Property>
+            <Property Type="Visual" Name="Bold"><![CDATA[value:False]]></Property>
+            <Property Type="Visual" Name="FontSize"><![CDATA[value:20]]></Property>
+            <Property Type="Visual" Name="Alignment"><![CDATA[value:Left]]></Property>
+            <Property Type="Visual" Name="Italic"><![CDATA[value:False]]></Property>
+            <Property Type="Container" Name="X"><![CDATA[value:228]]></Property>
+            <Property Type="Container" Name="Y"><![CDATA[value:26]]></Property>
+            <Property Type="Container" Name="Width"><![CDATA[value:406.50000000000006]]></Property>
+            <Property Type="Container" Name="Height"><![CDATA[value:36]]></Property>
+            <Property Type="Container" Name="Orientation"><![CDATA[value:0]]></Property>
+          </Properties>
+        </Asset>
+        <Asset Name="System guidance:" Visual="DefaultText" Container="Scale" ContainerStyle="" Domain="value:Text">
+          <Properties>
+            <Property Type="Visual" Name="FontColor"><![CDATA[value:#FF262626]]></Property>
+            <Property Type="Visual" Name="Font"><![CDATA[value:Verdana]]></Property>
+            <Property Type="Visual" Name="Bold"><![CDATA[value:False]]></Property>
+            <Property Type="Visual" Name="FontSize"><![CDATA[value:14]]></Property>
+            <Property Type="Visual" Name="Alignment"><![CDATA[value:Left]]></Property>
+            <Property Type="Domain" Name="Text"><![CDATA[value:System guidance:]]></Property>
+            <Property Type="Visual" Name="VerticalAlignment"><![CDATA[value:Center]]></Property>
+            <Property Type="Container" Name="X"><![CDATA[value:104]]></Property>
+            <Property Type="Container" Name="Y"><![CDATA[value:74]]></Property>
+            <Property Type="Container" Name="Width"><![CDATA[value:139]]></Property>
+            <Property Type="Container" Name="Height"><![CDATA[value:30]]></Property>
+            <Property Type="Container" Name="Orientation"><![CDATA[value:0]]></Property>
+          </Properties>
+        </Asset>
+        <Asset Name="Send system guidance" Visual="Button" Style="Simple button" Container="Default" ContainerStyle="" Domain="value:VisibleTrigger">
+          <Attachments>
+            <EventTrigger EventType="Visual" EventName="Released">
+              <InvokeService Target="mashup://externals/ChatGPT%20-%20Player%20on%20Windows/" Type="Domain" Name="addSystemMessage" Delay="value:0">
+                <ServiceValueParameter ParamName="message_" Value="mashup://visuals/mashup_root_2/Default_template_for_ChatGPT-Windows/Group%20Actions/Text%20Input%20-%20SYSTEM%20GUIDANCE/DomainComponent/Text" />
+              </InvokeService>
+              <InvokeService Target="mashup://visuals/mashup_root_2/Default_template_for_ChatGPT-Windows/Group%20Actions/Text%20Input%20-%20SYSTEM%20GUIDANCE/" Type="Visual" Name="StopEdition" Delay="value:0" />
+            </EventTrigger>
+          </Attachments>
+          <Properties>
+            <Property Type="Visual" Name="Font">
+              <Typeface>
+                <Family>Segoe UI</Family>
+                <Stretch>normal</Stretch>
+                <Weight>400</Weight>
+                <Style>normal</Style>
+              </Typeface>
+            </Property>
+            <Property Type="Visual" Name="FontSize"><![CDATA[value:14]]></Property>
+            <Property Type="Visual" Name="Text"><![CDATA[value:Specify system guidance ]]></Property>
+            <Property Type="Visual" Name="BackgroundColor"><![CDATA[value:#FFFAFAFA]]></Property>
+            <Property Type="Visual" Name="Radius"><![CDATA[value:5]]></Property>
+            <Property Type="Visual" Name="Flat"><![CDATA[value:True]]></Property>
+            <Property Type="Visual" Name="PressedVeilColor"><![CDATA[value:#80000000]]></Property>
+            <Property Type="Visual" Name="FontColor"><![CDATA[value:#FF000000]]></Property>
+            <Property Type="Visual" Name="OutlineColor"><![CDATA[value:#FF2B2B2B]]></Property>
+            <Property Type="Visual" Name="LineWrap"><![CDATA[value:True]]></Property>
+            <Property Type="Container" Name="X"><![CDATA[value:768]]></Property>
+            <Property Type="Container" Name="Y"><![CDATA[value:74]]></Property>
+            <Property Type="Container" Name="Width"><![CDATA[value:194]]></Property>
+            <Property Type="Container" Name="Height"><![CDATA[value:30]]></Property>
+            <Property Type="Container" Name="Orientation"><![CDATA[value:0]]></Property>
+          </Properties>
+        </Asset>
+        <Asset Name="Prompt:" Visual="DefaultText" Container="Scale" ContainerStyle="" Domain="value:Text">
+          <Properties>
+            <Property Type="Visual" Name="FontColor"><![CDATA[value:#FF262626]]></Property>
+            <Property Type="Visual" Name="Font"><![CDATA[value:Verdana]]></Property>
+            <Property Type="Visual" Name="Bold"><![CDATA[value:False]]></Property>
+            <Property Type="Visual" Name="FontSize"><![CDATA[value:14]]></Property>
+            <Property Type="Visual" Name="Alignment"><![CDATA[value:Left]]></Property>
+            <Property Type="Domain" Name="Text"><![CDATA[value:Prompt:]]></Property>
+            <Property Type="Visual" Name="VerticalAlignment"><![CDATA[value:Center]]></Property>
+            <Property Type="Container" Name="X"><![CDATA[value:100]]></Property>
+            <Property Type="Container" Name="Y"><![CDATA[value:118]]></Property>
+            <Property Type="Container" Name="Width"><![CDATA[value:130]]></Property>
+            <Property Type="Container" Name="Height"><![CDATA[value:30]]></Property>
+            <Property Type="Container" Name="Orientation"><![CDATA[value:0]]></Property>
+          </Properties>
+        </Asset>
+        <Asset Name="Send Prompt" Visual="Button" Style="Simple button" Container="Default" ContainerStyle="" Domain="value:VisibleTrigger">
+          <Attachments>
+            <EventTrigger EventType="Visual" EventName="Released">
+              <InvokeService Target="mashup://externals/ChatGPT%20-%20Player%20on%20Windows/" Type="Domain" Name="textCompletion" Delay="value:0">
+                <ServiceValueParameter ParamName="model_" Value="value:gpt-4" />
+                <ServiceValueParameter ParamName="temperature_" Value="value:1" />
+                <ServiceValueParameter ParamName="message_" Value="mashup://visuals/mashup_root_2/Default_template_for_ChatGPT-Windows/Group%20Actions/Text%20Input%20-%20PROMPT/DomainComponent/Text" />
+                <ServiceValueParameter ParamName="maxTokens_" Value="value:50" />
+              </InvokeService>
+              <InvokeService Target="mashup://visuals/mashup_root_2/Default_template_for_ChatGPT-Windows/Group%20Actions/Text%20Input%20-%20SYSTEM%20GUIDANCE/" Type="Visual" Name="StopEdition" Delay="value:0" />
+              <InvokeService Target="mashup://visuals/mashup_root_2/Default_template_for_ChatGPT-Windows/Group%20Triggers/Value%20-%20Error%20Received/" Type="Domain" Name="SetText" Delay="value:0">
+                <ServiceValueParameter ParamName="value" Value="value:" />
+              </InvokeService>
+            </EventTrigger>
+          </Attachments>
+          <Properties>
+            <Property Type="Visual" Name="Font">
+              <Typeface>
+                <Family>Segoe UI</Family>
+                <Stretch>normal</Stretch>
+                <Weight>400</Weight>
+                <Style>normal</Style>
+              </Typeface>
+            </Property>
+            <Property Type="Visual" Name="FontSize"><![CDATA[value:14]]></Property>
+            <Property Type="Visual" Name="Text"><![CDATA[value:Send prompt]]></Property>
+            <Property Type="Visual" Name="BackgroundColor"><![CDATA[value:#FFFAFAFA]]></Property>
+            <Property Type="Visual" Name="Radius"><![CDATA[value:5]]></Property>
+            <Property Type="Visual" Name="Flat"><![CDATA[value:True]]></Property>
+            <Property Type="Visual" Name="PressedVeilColor"><![CDATA[value:#80000000]]></Property>
+            <Property Type="Visual" Name="FontColor"><![CDATA[value:#FF000000]]></Property>
+            <Property Type="Visual" Name="OutlineColor"><![CDATA[value:#FF2B2B2B]]></Property>
+            <Property Type="Visual" Name="LineWrap"><![CDATA[value:True]]></Property>
+            <Property Type="Container" Name="X"><![CDATA[value:768]]></Property>
+            <Property Type="Container" Name="Y"><![CDATA[value:118]]></Property>
+            <Property Type="Container" Name="Width"><![CDATA[value:194]]></Property>
+            <Property Type="Container" Name="Height"><![CDATA[value:30]]></Property>
+            <Property Type="Container" Name="Orientation"><![CDATA[value:0]]></Property>
+          </Properties>
+        </Asset>
+        <Asset Name="Text Input - SYSTEM GUIDANCE" Visual="Text input" Style="" Container="Scale" ContainerStyle="" Domain="value:Text input">
+          <Attachments>
+            <EventTrigger EventType="Visual" EventName="EnterKeyPressed">
+              <InvokeService Target="mashup://visuals/mashup_root_2/Default_template_for_ChatGPT-Windows/Group%20Actions/Text%20Input%20-%20SYSTEM%20GUIDANCE/" Type="Visual" Name="StopEdition" Delay="value:0.0" />
+            </EventTrigger>
+          </Attachments>
+          <Properties>
+            <Property Type="Domain" Name="Text"><![CDATA[value:Answer in less than 20 words. ]]></Property>
+            <Property Type="Visual" Name="Font"><![CDATA[value:Verdana]]></Property>
+            <Property Type="Visual" Name="FontColor"><![CDATA[value:#FF262626]]></Property>
+            <Property Type="Visual" Name="FontSize"><![CDATA[value:14]]></Property>
+            <Property Type="Visual" Name="InstructionFont">
+              <Typeface>
+                <Family>Segoe UI</Family>
+                <Stretch>normal</Stretch>
+                <Weight>400</Weight>
+                <Style>italic</Style>
+              </Typeface>
+            </Property>
+            <Property Type="Visual" Name="InstructionFontSize"><![CDATA[value:25]]></Property>
+            <Property Type="Visual" Name="Keyboard"><![CDATA[value:UNDEFINED]]></Property>
+            <Property Type="Visual" Name="BackgroundColor"><![CDATA[value:#FFBABABA]]></Property>
+            <Property Type="Visual" Name="EditionBackgroundColor"><![CDATA[value:#FFCFCFCF]]></Property>
+            <Property Type="Visual" Name="InstructionFontColor"><![CDATA[value:#FF848484]]></Property>
+            <Property Type="Visual" Name="InstructionItalic"><![CDATA[value:True]]></Property>
+            <Property Type="Visual" Name="SelectionAreaColor"><![CDATA[value:#FF595959]]></Property>
+            <Property Type="Visual" Name="Bold"><![CDATA[value:True]]></Property>
+            <Property Type="Visual" Name="BorderColor"><![CDATA[value:#FFE8E8E8]]></Property>
+            <Property Type="Visual" Name="EditionBorderColor"><![CDATA[value:#FFE8E8E8]]></Property>
+            <Property Type="Visual" Name="TextAlignment"><![CDATA[value:Left]]></Property>
+            <Property Type="Container" Name="X"><![CDATA[value:414]]></Property>
+            <Property Type="Container" Name="Y"><![CDATA[value:75]]></Property>
+            <Property Type="Container" Name="Width"><![CDATA[value:480]]></Property>
+            <Property Type="Container" Name="Height"><![CDATA[value:30]]></Property>
+            <Property Type="Container" Name="Orientation"><![CDATA[value:0]]></Property>
+          </Properties>
+        </Asset>
+        <Asset Name="Clear chat session" Visual="Button" Style="Simple button" Container="Default" ContainerStyle="" Domain="value:VisibleTrigger">
+          <Attachments>
+            <EventTrigger EventType="Visual" EventName="Released">
+              <InvokeService Target="mashup://externals/ChatGPT%20-%20Player%20on%20Windows/" Type="Domain" Name="clearChatSession" Delay="value:0" />
+            </EventTrigger>
+          </Attachments>
+          <Properties>
+            <Property Type="Visual" Name="Font">
+              <Typeface>
+                <Family>Segoe UI</Family>
+                <Stretch>normal</Stretch>
+                <Weight>400</Weight>
+                <Style>normal</Style>
+              </Typeface>
+            </Property>
+            <Property Type="Visual" Name="FontSize"><![CDATA[value:14]]></Property>
+            <Property Type="Visual" Name="Text"><![CDATA[value:Clear chat session]]></Property>
+            <Property Type="Visual" Name="BackgroundColor"><![CDATA[value:#FFFAFAFA]]></Property>
+            <Property Type="Visual" Name="Radius"><![CDATA[value:5]]></Property>
+            <Property Type="Visual" Name="Flat"><![CDATA[value:True]]></Property>
+            <Property Type="Visual" Name="PressedVeilColor"><![CDATA[value:#80000000]]></Property>
+            <Property Type="Visual" Name="FontColor"><![CDATA[value:#FF000000]]></Property>
+            <Property Type="Visual" Name="OutlineColor"><![CDATA[value:#FF2B2B2B]]></Property>
+            <Property Type="Visual" Name="LineWrap"><![CDATA[value:True]]></Property>
+            <Property Type="Container" Name="X"><![CDATA[value:768]]></Property>
+            <Property Type="Container" Name="Y"><![CDATA[value:164]]></Property>
+            <Property Type="Container" Name="Width"><![CDATA[value:194]]></Property>
+            <Property Type="Container" Name="Height"><![CDATA[value:30]]></Property>
+            <Property Type="Container" Name="Orientation"><![CDATA[value:0]]></Property>
+          </Properties>
+        </Asset>
+        <Asset Name="Text Input - PROMPT" Visual="Text input" Style="" Container="Scale" ContainerStyle="" Domain="value:Text input">
+          <Attachments>
+            <EventTrigger EventType="Visual" EventName="EnterKeyPressed">
+              <InvokeService Target="mashup://visuals/mashup_root_2/Default_template_for_ChatGPT-Windows/Group%20Actions/Text%20Input%20-%20PROMPT/" Type="Visual" Name="StopEdition" Delay="value:0.0" />
+            </EventTrigger>
+          </Attachments>
+          <Properties>
+            <Property Type="Domain" Name="Text"><![CDATA[value:Who is the most renowned fashion designer in the world? ]]></Property>
+            <Property Type="Visual" Name="Font"><![CDATA[value:Verdana]]></Property>
+            <Property Type="Visual" Name="FontColor"><![CDATA[value:#FF262626]]></Property>
+            <Property Type="Visual" Name="FontSize"><![CDATA[value:14]]></Property>
+            <Property Type="Visual" Name="InstructionFont">
+              <Typeface>
+                <Family>Segoe UI</Family>
+                <Stretch>normal</Stretch>
+                <Weight>400</Weight>
+                <Style>italic</Style>
+              </Typeface>
+            </Property>
+            <Property Type="Visual" Name="InstructionFontSize"><![CDATA[value:25]]></Property>
+            <Property Type="Visual" Name="Keyboard"><![CDATA[value:UNDEFINED]]></Property>
+            <Property Type="Visual" Name="BackgroundColor"><![CDATA[value:#FFBABABA]]></Property>
+            <Property Type="Visual" Name="EditionBackgroundColor"><![CDATA[value:#FFCFCFCF]]></Property>
+            <Property Type="Visual" Name="InstructionFontColor"><![CDATA[value:#FF848484]]></Property>
+            <Property Type="Visual" Name="InstructionItalic"><![CDATA[value:True]]></Property>
+            <Property Type="Visual" Name="SelectionAreaColor"><![CDATA[value:#FF595959]]></Property>
+            <Property Type="Visual" Name="Bold"><![CDATA[value:True]]></Property>
+            <Property Type="Visual" Name="BorderColor"><![CDATA[value:#FFE8E8E8]]></Property>
+            <Property Type="Visual" Name="EditionBorderColor"><![CDATA[value:#FFE8E8E8]]></Property>
+            <Property Type="Visual" Name="TextAlignment"><![CDATA[value:Left]]></Property>
+            <Property Type="Container" Name="X"><![CDATA[value:414]]></Property>
+            <Property Type="Container" Name="Y"><![CDATA[value:118]]></Property>
+            <Property Type="Container" Name="Width"><![CDATA[value:480]]></Property>
+            <Property Type="Container" Name="Height"><![CDATA[value:30]]></Property>
+            <Property Type="Container" Name="Orientation"><![CDATA[value:0]]></Property>
+          </Properties>
+        </Asset>
+      </Collection>
+      <Asset Name="Group separator Middle" Visual="DefaultRectangle" Style="" Container="No resize" ContainerStyle="" Domain="value:Rectangle">
+        <Properties>
+          <Property Type="Visual" Name="BorderThickness"><![CDATA[value:0]]></Property>
+          <Property Type="Visual" Name="BorderColor"><![CDATA[value:#00000000]]></Property>
+          <Property Type="Visual" Name="CornerRadius"><![CDATA[value:0]]></Property>
+          <Property Type="Visual" Name="BackgroundColor"><![CDATA[value:#D9343333]]></Property>
+          <Property Type="Container" Name="X"><![CDATA[value:450]]></Property>
+          <Property Type="Container" Name="Y"><![CDATA[value:792]]></Property>
+          <Property Type="Container" Name="Width"><![CDATA[value:900]]></Property>
+          <Property Type="Container" Name="Height"><![CDATA[value:1]]></Property>
+          <Property Type="Container" Name="Orientation"><![CDATA[value:0]]></Property>
+        </Properties>
+      </Asset>
+      <Collection Name="Group Triggers" Visual="Group" Style="" Container="Default" ContainerStyle="">
+        <Properties>
+          <Property Type="Container" Name="X"><![CDATA[value:450]]></Property>
+          <Property Type="Container" Name="Y"><![CDATA[value:889]]></Property>
+          <Property Type="Visual" Name="InitialWidth"><![CDATA[value:900]]></Property>
+          <Property Type="Container" Name="Width"><![CDATA[value:900]]></Property>
+          <Property Type="Visual" Name="InitialHeight"><![CDATA[value:162]]></Property>
+          <Property Type="Container" Name="Height"><![CDATA[value:162]]></Property>
+          <Property Type="Container" Name="Orientation"><![CDATA[value:0]]></Property>
+        </Properties>
+        <Asset Name="TRIGGERS" Visual="DefaultText" Style="" Container="Scale" ContainerStyle="" Domain="value:Text">
+          <Properties>
+            <Property Type="Visual" Name="VerticalAlignment"><![CDATA[value:Center]]></Property>
+            <Property Type="Visual" Name="Font"><![CDATA[value:Verdana]]></Property>
+            <Property Type="Visual" Name="FontColor"><![CDATA[value:#FF333333]]></Property>
+            <Property Type="Domain" Name="Text"><![CDATA[value:TRIGGERS]]></Property>
+            <Property Type="Visual" Name="Bold"><![CDATA[value:False]]></Property>
+            <Property Type="Visual" Name="FontSize"><![CDATA[value:20]]></Property>
+            <Property Type="Visual" Name="Alignment"><![CDATA[value:Left]]></Property>
+            <Property Type="Visual" Name="Italic"><![CDATA[value:False]]></Property>
+            <Property Type="Container" Name="X"><![CDATA[value:228]]></Property>
+            <Property Type="Container" Name="Y"><![CDATA[value:30]]></Property>
+            <Property Type="Container" Name="Width"><![CDATA[value:406.50000000000006]]></Property>
+            <Property Type="Container" Name="Height"><![CDATA[value:36]]></Property>
+            <Property Type="Container" Name="Orientation"><![CDATA[value:0]]></Property>
+          </Properties>
+        </Asset>
+        <Asset Name="Trigger event feedback" Visual="DefaultEllipse" Style="" Container="Default" ContainerStyle="" Domain="value:Ellipse">
+          <Properties>
+            <Property Type="Visual" Name="BorderColor"><![CDATA[value:#FF000000]]></Property>
+            <Property Type="Container" Name="MinimizedWidth"><![CDATA[value:50]]></Property>
+            <Property Type="Container" Name="MinimizedHeight"><![CDATA[value:50]]></Property>
+            <Property Type="Container" Name="DisplayButtonsRadius"><![CDATA[value:19]]></Property>
+            <Property Type="Visual" Name="BackgroundColor"><![CDATA[value:#FF7D00A3]]></Property>
+            <Property Type="Visual" Name="BorderThickness"><![CDATA[value:0]]></Property>
+            <Property Type="Visual" Name="Flat"><![CDATA[value:True]]></Property>
+            <Property Type="Visual" Name="Effects">
+              <EffectsCollection>
+                <Blur Radius="4" />
+              </EffectsCollection>
+            </Property>
+            <Property Type="Container" Name="IsVisible"><![CDATA[value:False]]></Property>
+            <Property Type="Container" Name="X"><![CDATA[value:182]]></Property>
+            <Property Type="Container" Name="Y"><![CDATA[value:64]]></Property>
+            <Property Type="Container" Name="Width"><![CDATA[value:20]]></Property>
+            <Property Type="Container" Name="Height"><![CDATA[value:20]]></Property>
+            <Property Type="Container" Name="Orientation"><![CDATA[value:0]]></Property>
+          </Properties>
+        </Asset>
+        <Asset Name="Trigger Error feedback" Visual="DefaultEllipse" Style="" Container="Default" ContainerStyle="" Domain="value:Ellipse">
+          <Properties>
+            <Property Type="Visual" Name="BorderColor"><![CDATA[value:#FF000000]]></Property>
+            <Property Type="Container" Name="MinimizedWidth"><![CDATA[value:50]]></Property>
+            <Property Type="Container" Name="MinimizedHeight"><![CDATA[value:50]]></Property>
+            <Property Type="Container" Name="DisplayButtonsRadius"><![CDATA[value:19]]></Property>
+            <Property Type="Visual" Name="BackgroundColor"><![CDATA[value:#FF7D00A3]]></Property>
+            <Property Type="Visual" Name="BorderThickness"><![CDATA[value:0]]></Property>
+            <Property Type="Visual" Name="Flat"><![CDATA[value:True]]></Property>
+            <Property Type="Visual" Name="Effects">
+              <EffectsCollection>
+                <Blur Radius="4" />
+              </EffectsCollection>
+            </Property>
+            <Property Type="Container" Name="IsVisible"><![CDATA[value:False]]></Property>
+            <Property Type="Container" Name="X"><![CDATA[value:182]]></Property>
+            <Property Type="Container" Name="Y"><![CDATA[value:126]]></Property>
+            <Property Type="Container" Name="Width"><![CDATA[value:20]]></Property>
+            <Property Type="Container" Name="Height"><![CDATA[value:20]]></Property>
+            <Property Type="Container" Name="Orientation"><![CDATA[value:0]]></Property>
+          </Properties>
+        </Asset>
+        <Asset Name="Response Received:" Visual="DefaultText" Container="Scale" ContainerStyle="" Domain="value:Text">
+          <Properties>
+            <Property Type="Visual" Name="FontColor"><![CDATA[value:#FF262626]]></Property>
+            <Property Type="Visual" Name="Font"><![CDATA[value:Verdana]]></Property>
+            <Property Type="Visual" Name="Bold"><![CDATA[value:False]]></Property>
+            <Property Type="Visual" Name="FontSize"><![CDATA[value:14]]></Property>
+            <Property Type="Visual" Name="Alignment"><![CDATA[value:Left]]></Property>
+            <Property Type="Domain" Name="Text"><![CDATA[value:Response Received: ]]></Property>
+            <Property Type="Visual" Name="VerticalAlignment"><![CDATA[value:Center]]></Property>
+            <Property Type="Container" Name="X"><![CDATA[value:108]]></Property>
+            <Property Type="Container" Name="Y"><![CDATA[value:63]]></Property>
+            <Property Type="Container" Name="Width"><![CDATA[value:147]]></Property>
+            <Property Type="Container" Name="Height"><![CDATA[value:30]]></Property>
+            <Property Type="Container" Name="Orientation"><![CDATA[value:0]]></Property>
+          </Properties>
+        </Asset>
+        <Asset Name="Value - Response Received" Visual="DefaultText" Style="" Container="Scale" ContainerStyle="" Domain="value:Text">
+          <Properties>
+            <Property Type="Domain" Name="Text"><![CDATA[value:]]></Property>
+            <Property Type="Visual" Name="Font"><![CDATA[value:Verdana]]></Property>
+            <Property Type="Visual" Name="FontSize"><![CDATA[value:14]]></Property>
+            <Property Type="Visual" Name="FontColor"><![CDATA[value:#FF262626]]></Property>
+            <Property Type="Visual" Name="VerticalAlignment"><![CDATA[value:Center]]></Property>
+            <Property Type="Visual" Name="Alignment"><![CDATA[value:Left]]></Property>
+            <Property Type="Visual" Name="Bold"><![CDATA[value:True]]></Property>
+            <Property Type="Container" Name="X"><![CDATA[value:534]]></Property>
+            <Property Type="Container" Name="Y"><![CDATA[value:63]]></Property>
+            <Property Type="Container" Name="Width"><![CDATA[value:664]]></Property>
+            <Property Type="Container" Name="Height"><![CDATA[value:63]]></Property>
+            <Property Type="Container" Name="Orientation"><![CDATA[value:0]]></Property>
+          </Properties>
+        </Asset>
+        <Asset Name="Error Received:" Visual="DefaultText" Container="Scale" ContainerStyle="" Domain="value:Text">
+          <Properties>
+            <Property Type="Visual" Name="FontColor"><![CDATA[value:#FF262626]]></Property>
+            <Property Type="Visual" Name="Font"><![CDATA[value:Verdana]]></Property>
+            <Property Type="Visual" Name="Bold"><![CDATA[value:False]]></Property>
+            <Property Type="Visual" Name="FontSize"><![CDATA[value:14]]></Property>
+            <Property Type="Visual" Name="Alignment"><![CDATA[value:Left]]></Property>
+            <Property Type="Domain" Name="Text"><![CDATA[value:Error Received: ]]></Property>
+            <Property Type="Visual" Name="VerticalAlignment"><![CDATA[value:Center]]></Property>
+            <Property Type="Container" Name="X"><![CDATA[value:108]]></Property>
+            <Property Type="Container" Name="Y"><![CDATA[value:126]]></Property>
+            <Property Type="Container" Name="Width"><![CDATA[value:147]]></Property>
+            <Property Type="Container" Name="Height"><![CDATA[value:30]]></Property>
+            <Property Type="Container" Name="Orientation"><![CDATA[value:0]]></Property>
+          </Properties>
+        </Asset>
+        <Asset Name="Value - Error Received" Visual="DefaultText" Style="" Container="Scale" ContainerStyle="" Domain="value:Text">
+          <Properties>
+            <Property Type="Domain" Name="Text"><![CDATA[value:]]></Property>
+            <Property Type="Visual" Name="Font">
+              <Typeface>
+                <Family>Verdana</Family>
+                <Stretch>normal</Stretch>
+                <Weight>400</Weight>
+                <Style>italic</Style>
+              </Typeface>
+            </Property>
+            <Property Type="Visual" Name="FontSize"><![CDATA[value:12]]></Property>
+            <Property Type="Visual" Name="FontColor"><![CDATA[value:#FF262626]]></Property>
+            <Property Type="Visual" Name="VerticalAlignment"><![CDATA[value:Center]]></Property>
+            <Property Type="Visual" Name="Alignment"><![CDATA[value:Left]]></Property>
+            <Property Type="Visual" Name="Bold"><![CDATA[value:False]]></Property>
+            <Property Type="Container" Name="X"><![CDATA[value:534]]></Property>
+            <Property Type="Container" Name="Y"><![CDATA[value:126]]></Property>
+            <Property Type="Container" Name="Width"><![CDATA[value:664]]></Property>
+            <Property Type="Container" Name="Height"><![CDATA[value:63]]></Property>
+            <Property Type="Container" Name="Orientation"><![CDATA[value:0]]></Property>
+          </Properties>
+        </Asset>
+      </Collection>
+      <Asset Name="Group separator Bottom" Visual="DefaultRectangle" Style="" Container="No resize" ContainerStyle="" Domain="value:Rectangle">
+        <Properties>
+          <Property Type="Visual" Name="BorderThickness"><![CDATA[value:0]]></Property>
+          <Property Type="Visual" Name="BorderColor"><![CDATA[value:#00000000]]></Property>
+          <Property Type="Visual" Name="CornerRadius"><![CDATA[value:0]]></Property>
+          <Property Type="Visual" Name="BackgroundColor"><![CDATA[value:#D9343333]]></Property>
+          <Property Type="Container" Name="X"><![CDATA[value:450]]></Property>
+          <Property Type="Container" Name="Y"><![CDATA[value:969]]></Property>
+          <Property Type="Container" Name="Width"><![CDATA[value:900]]></Property>
+          <Property Type="Container" Name="Height"><![CDATA[value:1]]></Property>
+          <Property Type="Container" Name="Orientation"><![CDATA[value:0]]></Property>
+        </Properties>
+      </Asset>
+      <Asset Name="ChatGPT - Player on " Visual="DefaultText" Style="" Container="Scale" ContainerStyle="" Domain="value:Text">
+        <Properties>
+          <Property Type="Visual" Name="VerticalAlignment"><![CDATA[value:Center]]></Property>
+          <Property Type="Visual" Name="Font">
+            <Typeface>
+              <Family>Verdana</Family>
+              <Stretch>normal</Stretch>
+              <Weight>700</Weight>
+              <Style>normal</Style>
+            </Typeface>
+          </Property>
+          <Property Type="Visual" Name="FontColor"><![CDATA[value:#FF333333]]></Property>
+          <Property Type="Domain" Name="Text"><![CDATA[value:ChatGPT - Player on Windows]]></Property>
+          <Property Type="Visual" Name="Bold"><![CDATA[value:False]]></Property>
+          <Property Type="Visual" Name="FontSize"><![CDATA[value:20]]></Property>
+          <Property Type="Visual" Name="Alignment"><![CDATA[value:Left]]></Property>
+          <Property Type="Visual" Name="Italic"><![CDATA[value:False]]></Property>
+          <Property Type="Container" Name="X"><![CDATA[value:368]]></Property>
+          <Property Type="Container" Name="Y"><![CDATA[value:102]]></Property>
+          <Property Type="Container" Name="Width"><![CDATA[value:685]]></Property>
+          <Property Type="Container" Name="Height"><![CDATA[value:36]]></Property>
+          <Property Type="Container" Name="Orientation"><![CDATA[value:0]]></Property>
+        </Properties>
+      </Asset>
+    </Collection>
+  </MashupCollection>
+  <MashupResource>
+    <Resource Key="193d8d54-5761-4d93-abf7-882cc11fbd03" Type="uri" Length="20458" LastModificationDate="2024-02-01T14:39:29.0076604Z" Archive="SmallFiles.zip" DefaultValue="player://data/Images/OpenAI-Black-Logo.png">
+      <Alternate Value="player://data/Generated/513604b6d7fd04ec6485a9f4e7147758.png" Width="847" Height="309" Length="25786" LastModificationDate="2024-02-06T14:46:22.4146128-06:00" Archive="SmallFiles.zip" />
+    </Resource>
+  </MashupResource>
+  <MashupExternalAsset ContextAlias="ASSOCIATED_IA">
+    <ExternalAsset Name="ChatGPT - Player on Windows" DescriptorPath="player://resources/473d923f-18ed-4f5f-ac95-f9db44a2eb96" ExternalAssetName="ChatGPT4NET">
+      <Attachments>
+        <PresentationEventTrigger EventType="Domain" EventName="MessageReceivedEvent" TypeList="All">
+          <InvokeService Target="mashup://visuals/mashup_root_2/Default_template_for_ChatGPT-Windows/Group%20Triggers/Trigger%20event%20feedback/" Type="Container" Name="Show" Delay="value:0">
+            <ServiceValueParameter ParamName="hideOtherAssetsInCollection" Value="value:False" />
+            <ServiceValueParameter ParamName="animationType" Value="value:Fade" />
+            <ServiceValueParameter ParamName="dDuration" Value="value:0.2" />
+            <ServiceValueParameter ParamName="eTweeningTypes" Value="value:eEaseInOut" />
+            <ServiceValueParameter ParamName="nRunningCount" Value="value:3" />
+            <ServiceValueParameter ParamName="eRepeatBehavior" Value="value:eAutoReverse" />
+            <ServiceValueParameter ParamName="dDelayBeforeRepeat" Value="value:0" />
+            <ServiceValueParameter ParamName="bResetAtEnd" Value="value:True" />
+          </InvokeService>
+          <InvokeService Target="mashup://visuals/mashup_root_2/Default_template_for_ChatGPT-Windows/Group%20Triggers/Value%20-%20Response%20Received/" Type="Domain" Name="SetText" Delay="value:0">
+            <ServiceArgumentParameter ParamName="value" ArgumentName="MessageReceived" />
+          </InvokeService>
+          <InvokeService Target="mashup://visuals/mashup_root_2/Default_template_for_ChatGPT-Windows/Group%20Properties/Messages%20sentreceived/" Type="Visual" Name="Forward" Delay="value:0" />
+          <InvokeService Target="mashup://visuals/mashup_root_2/Default_template_for_ChatGPT-Windows/Group%20Properties/Messages%20sentreceived/" Type="Visual" Name="Forward" Delay="value:0.5" />
+        </PresentationEventTrigger>
+        <PresentationEventTrigger EventType="Domain" EventName="ErrorMessageEvent" TypeList="All">
+          <InvokeService Target="mashup://visuals/mashup_root_2/Default_template_for_ChatGPT-Windows/Group%20Triggers/Trigger%20Error%20feedback/" Type="Container" Name="Show" Delay="value:0">
+            <ServiceValueParameter ParamName="animationType" Value="value:Fade" />
+            <ServiceValueParameter ParamName="eTweeningTypes" Value="value:eEaseInOut" />
+            <ServiceValueParameter ParamName="eRepeatBehavior" Value="value:eAutoReverse" />
+            <ServiceValueParameter ParamName="hideOtherAssetsInCollection" Value="value:False" />
+            <ServiceValueParameter ParamName="dDuration" Value="value:0.2" />
+            <ServiceValueParameter ParamName="nRunningCount" Value="value:3" />
+            <ServiceValueParameter ParamName="dDelayBeforeRepeat" Value="value:0" />
+            <ServiceValueParameter ParamName="bResetAtEnd" Value="value:True" />
+          </InvokeService>
+          <InvokeService Target="mashup://visuals/mashup_root_2/Default_template_for_ChatGPT-Windows/Group%20Triggers/Value%20-%20Error%20Received/" Type="Domain" Name="SetText" Delay="value:0">
+            <ServiceArgumentParameter ParamName="value" ArgumentName="ErrorMessage" />
+          </InvokeService>
+        </PresentationEventTrigger>
+      </Attachments>
+      <Properties>
+        <Property Type="Domain" Name="APIKey"><![CDATA[mashup://visuals/mashup_root_2/Default_template_for_ChatGPT-Windows/Group%20Properties/Value%20-%20OpenAI%20Key/DomainComponent/Text]]></Property>
+      </Properties>
+    </ExternalAsset>
+  </MashupExternalAsset>
+  <MashupResource>
+    <Resource Key="473d923f-18ed-4f5f-ac95-f9db44a2eb96" Type="uri" Length="4669" LastModificationDate="2024-01-25T16:37:33.0800553Z" DefaultValue="player://data/InterfaceAssets/ChatGPT4NET/ChatGPT4NET.ifd">
+      <Dependencies>
+        <Dependency URI="player://data/InterfaceAssets/ChatGPT4NET/ChatGPT4NET.dll" Length="9728" LastModificationDate="2024-01-03T19:46:35.9813754Z" Archive="SmallFiles.zip" />
+        <Dependency URI="player://data/InterfaceAssets/ChatGPT4NET/ChatGPT4NET.dll.config" Length="710" LastModificationDate="2023-11-06T13:38:05.1116598Z" Archive="SmallFiles.zip" />
+        <Dependency URI="player://data/InterfaceAssets/ChatGPT4NET/ChatGPT4NET.pdb" Length="34304" LastModificationDate="2024-01-03T19:46:35.9813754Z" Archive="SmallFiles.zip" />
+        <Dependency URI="player://data/InterfaceAssets/ChatGPT4NET/Microsoft.Bcl.AsyncInterfaces.dll" Length="20856" LastModificationDate="2020-04-14T22:39:20Z" Archive="SmallFiles.zip" />
+        <Dependency URI="player://data/InterfaceAssets/ChatGPT4NET/Microsoft.Bcl.AsyncInterfaces.xml" Length="18215" LastModificationDate="2020-04-14T22:39:20Z" Archive="SmallFiles.zip" />
+        <Dependency URI="player://data/InterfaceAssets/ChatGPT4NET/Microsoft.Extensions.Configuration.Abstractions.dll" Length="20472" LastModificationDate="2018-05-16T20:17:52Z" Archive="SmallFiles.zip" />
+        <Dependency URI="player://data/InterfaceAssets/ChatGPT4NET/Microsoft.Extensions.Configuration.Abstractions.xml" Length="13921" LastModificationDate="2018-05-16T19:21:00Z" Archive="SmallFiles.zip" />
+        <Dependency URI="player://data/InterfaceAssets/ChatGPT4NET/Microsoft.Extensions.Configuration.Binder.dll" Length="25072" LastModificationDate="2018-05-16T20:17:58Z" Archive="SmallFiles.zip" />
+        <Dependency URI="player://data/InterfaceAssets/ChatGPT4NET/Microsoft.Extensions.Configuration.Binder.xml" Length="11366" LastModificationDate="2018-05-16T19:21:02Z" Archive="SmallFiles.zip" />
+        <Dependency URI="player://data/InterfaceAssets/ChatGPT4NET/Microsoft.Extensions.Configuration.dll" Length="25592" LastModificationDate="2018-05-16T20:18:12Z" Archive="SmallFiles.zip" />
+        <Dependency URI="player://data/InterfaceAssets/ChatGPT4NET/Microsoft.Extensions.Configuration.xml" Length="23196" LastModificationDate="2018-05-16T19:21:02Z" Archive="SmallFiles.zip" />
+        <Dependency URI="player://data/InterfaceAssets/ChatGPT4NET/Microsoft.Extensions.DependencyInjection.Abstractions.dll" Length="36856" LastModificationDate="2018-05-16T20:18:12Z" Archive="SmallFiles.zip" />
+        <Dependency URI="player://data/InterfaceAssets/ChatGPT4NET/Microsoft.Extensions.DependencyInjection.Abstractions.xml" Length="88818" LastModificationDate="2018-05-16T19:20:14Z" Archive="SmallFiles.zip" />
+        <Dependency URI="player://data/InterfaceAssets/ChatGPT4NET/Microsoft.Extensions.Http.dll" Length="49656" LastModificationDate="2018-05-16T20:18:06Z" Archive="SmallFiles.zip" />
+        <Dependency URI="player://data/InterfaceAssets/ChatGPT4NET/Microsoft.Extensions.Http.xml" Length="61797" LastModificationDate="2018-05-16T19:22:36Z" Archive="SmallFiles.zip" />
+        <Dependency URI="player://data/InterfaceAssets/ChatGPT4NET/Microsoft.Extensions.Logging.Abstractions.dll" Length="47600" LastModificationDate="2018-05-16T20:17:48Z" Archive="SmallFiles.zip" />
+        <Dependency URI="player://data/InterfaceAssets/ChatGPT4NET/Microsoft.Extensions.Logging.Abstractions.xml" Length="49980" LastModificationDate="2018-05-16T19:22:04Z" Archive="SmallFiles.zip" />
+        <Dependency URI="player://data/InterfaceAssets/ChatGPT4NET/Microsoft.Extensions.Logging.dll" Length="31736" LastModificationDate="2018-05-16T20:17:56Z" Archive="SmallFiles.zip" />
+        <Dependency URI="player://data/InterfaceAssets/ChatGPT4NET/Microsoft.Extensions.Logging.xml" Length="5392" LastModificationDate="2018-05-16T19:22:06Z" Archive="SmallFiles.zip" />
+        <Dependency URI="player://data/InterfaceAssets/ChatGPT4NET/Microsoft.Extensions.Options.dll" Length="40432" LastModificationDate="2018-05-16T20:17:52Z" Archive="SmallFiles.zip" />
+        <Dependency URI="player://data/InterfaceAssets/ChatGPT4NET/Microsoft.Extensions.Options.xml" Length="48956" LastModificationDate="2018-05-16T19:21:22Z" Archive="SmallFiles.zip" />
+        <Dependency URI="player://data/InterfaceAssets/ChatGPT4NET/Microsoft.Extensions.Primitives.dll" Length="35832" LastModificationDate="2018-05-16T20:17:50Z" Archive="SmallFiles.zip" />
+        <Dependency URI="player://data/InterfaceAssets/ChatGPT4NET/Microsoft.Extensions.Primitives.xml" Length="34085" LastModificationDate="2018-05-16T19:19:40Z" Archive="SmallFiles.zip" />
+        <Dependency URI="player://data/InterfaceAssets/ChatGPT4NET/Newtonsoft.Json.dll" Length="711952" LastModificationDate="2023-03-08T07:09:56Z" />
+        <Dependency URI="player://data/InterfaceAssets/ChatGPT4NET/Newtonsoft.Json.xml" Length="713541" LastModificationDate="2023-03-08T07:05:50Z" />
+        <Dependency URI="player://data/InterfaceAssets/ChatGPT4NET/OpenAI_API.dll" Length="88576" LastModificationDate="2023-04-02T17:26:16Z" Archive="SmallFiles.zip" />
+        <Dependency URI="player://data/InterfaceAssets/ChatGPT4NET/OpenAI_API.xml" Length="175901" LastModificationDate="2023-04-02T17:26:16Z" />
+        <Dependency URI="player://data/InterfaceAssets/ChatGPT4NET/System.Buffers.dll" Length="27992" LastModificationDate="2017-07-19T10:01:28Z" Archive="SmallFiles.zip" />
+        <Dependency URI="player://data/InterfaceAssets/ChatGPT4NET/System.Buffers.xml" Length="3195" LastModificationDate="2017-07-19T10:01:28Z" Archive="SmallFiles.zip" />
+        <Dependency URI="player://data/InterfaceAssets/ChatGPT4NET/System.Memory.dll" Length="148624" LastModificationDate="2018-05-15T13:29:54Z" />
+        <Dependency URI="player://data/InterfaceAssets/ChatGPT4NET/System.Memory.xml" Length="13950" LastModificationDate="2018-05-15T13:29:54Z" Archive="SmallFiles.zip" />
+        <Dependency URI="player://data/InterfaceAssets/ChatGPT4NET/System.Numerics.Vectors.dll" Length="115936" LastModificationDate="2017-07-19T10:01:36Z" />
+        <Dependency URI="player://data/InterfaceAssets/ChatGPT4NET/System.Numerics.Vectors.xml" Length="183543" LastModificationDate="2017-07-19T10:01:36Z" />
+        <Dependency URI="player://data/InterfaceAssets/ChatGPT4NET/System.Runtime.CompilerServices.Unsafe.dll" Length="16768" LastModificationDate="2020-02-19T10:05:16Z" Archive="SmallFiles.zip" />
+        <Dependency URI="player://data/InterfaceAssets/ChatGPT4NET/System.Runtime.CompilerServices.Unsafe.xml" Length="14080" LastModificationDate="2020-02-19T10:05:16Z" Archive="SmallFiles.zip" />
+        <Dependency URI="player://data/InterfaceAssets/ChatGPT4NET/System.Threading.Tasks.Extensions.dll" Length="25984" LastModificationDate="2020-02-19T10:05:18Z" Archive="SmallFiles.zip" />
+        <Dependency URI="player://data/InterfaceAssets/ChatGPT4NET/System.Threading.Tasks.Extensions.xml" Length="10147" LastModificationDate="2020-02-19T10:05:18Z" Archive="SmallFiles.zip" />
+        <Dependency URI="player://data/InterfaceAssets/ChatGPT4NET/OpenAi-Icon-32x32.png" Length="673" LastModificationDate="2024-01-24T13:41:14.4712401Z" Archive="SmallFiles.zip" />
+      </Dependencies>
+    </Resource>
+  </MashupResource>
+</Mashup>

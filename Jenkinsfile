@@ -8,6 +8,16 @@ pipeline {
   stages {
     stage('Build') {
       steps {
+        dir('ChatGPT4NET')
+        {
+          script {
+            def msbuild = tool name: 'msbuild-v17', type: 'msbuild'
+
+            bat "\"${msbuild}\\MSBuild.exe\" /t:restore /p:RestorePAckagesConfig=true"
+            bat "\"${msbuild}\\MSBuild.exe\" /v:m /clp:ErrorsOnly;Summary /p:Configuration=Release /p:Platform=\"Any CPU\" ChatGPT4NET.sln"
+          }
+        }
+
         dir('WhisperNET')
         {
           script {
@@ -27,21 +37,23 @@ pipeline {
           def files = findFiles(glob: '**/Cryptifix-x64-*.zip')
           unzip zipFile: "cryptifix\\${files[0].name}", dir: 'cryptifix'
         }
+		    bat "cryptifix\\Cryptifix.exe sign \"ChatGPT4NET\\ChatGPT4NET\\bin\\Release\" --LicenseEdition=FREE --IsAllowedByNonInteractivePlayer=false"
 		    bat "cryptifix\\Cryptifix.exe sign \"WhisperNET\\WhisperNET\\bin\\Release\" --LicenseEdition=FREE --IsAllowedByNonInteractivePlayer=false"
       }
     }
 
     stage('Package') {
       steps {
+		    zip archive: true, dir: "ChatGPT4NET\\ChatGPT4NET\\bin\\Release", glob: '', zipFile: "ChatGPT4NET.zip"
 		    zip archive: true, dir: "WhisperNET\\WhisperNET\\bin\\Release", glob: '', zipFile: "WhisperNET.zip"
       }
     }
 	
     stage('Archive') {
       steps {
+        archiveArtifacts 'ChatGPT4NET.zip'
         archiveArtifacts 'WhisperNET.zip'
       }
     }
-
   }
 }
