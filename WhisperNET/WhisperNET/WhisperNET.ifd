@@ -37,65 +37,66 @@
         }
     },
     "resources": {
-        "WhisperNET": {
-            "id": "WhisperNET",
-            "methods": {
-                "startRecording": {
-                    "id": "WhisperNET.startRecording",
-                    "path": "startRecording",
-                    "title": "Start recording",
-                    "description": "Start recording audio through the device’s default microphone.",
-                    "parameters": {}
-                },
-                "stopRecording": {
-                    "id": "WhisperNET.stopRecording",
-                    "path": "stopRecording",
-                    "title": "Stop recording and transcribe",
-                    "description": "Stop the recording and send it to the OpenAI audio transcription API.",
-                    "parameters": {}
-                }
-            },
-          "events": {
-            "transcriptionReceived": {
-              "id": "transcriptionReceived",
-              "title": "Transcription received",
-              "description": "Raised when the transcribed text has been received.",
-              "properties": {
-                "transcribedText": {
-                  "type": "string",
-                  "title": "Transcribed text",
-                  "description": "The transcribed text received from OpenAI"
-                }
-              }
-            },
-            "audioRecordingReady": {
-              "id": "audioRecordingReady",
-              "title": "Audio recorded",
-              "description": "Raised when audio has been recorded.",
-              "properties": {
-                "audioRecording": {
-                  "type": "string",
-                  "title": "Audio recording",
-                  "description": ""
-                }
-              }
-            },
-            "ErrorMessageEvent": {
-              "id": "ErrorMessageEvent",
-              "title": "Error message received",
-              "description": "",
-              "properties": {
-                "ErrorMessage": {
-                  "type": "string",
-                  "title": "Error message",
-                  "description": "The error message received from OpenAI"
-                }
+      "WhisperNET": {
+        "id": "WhisperNET",
+        "methods": {
+          "startRecording": {
+            "id": "WhisperNET.startRecording",
+            "path": "startRecording",
+            "title": "Start recording",
+            "description": "Start recording audio through the device’s default microphone.",
+            "parameters": {}
+          },
+          "stopRecording": {
+            "id": "WhisperNET.stopRecording",
+            "path": "stopRecording",
+            "title": "Stop recording and transcribe",
+            "description": "Stop the recording and send it to the OpenAI audio transcription API.",
+            "parameters": {}
+          }
+        },
+        "events": {
+          "transcriptionReceived": {
+            "id": "transcriptionReceived",
+            "title": "Transcription received",
+            "description": "Raised when the transcribed text has been received.",
+            "properties": {
+              "transcribedText": {
+                "type": "string",
+                "title": "Transcribed text",
+                "description": "The transcribed text received from OpenAI"
               }
             }
           },
-            "if.interfaceAsset": true,
-            "title": "Whisper - Player on Windows",
-            "description": "Use the OpenAI Whisper model and OpenAI Audio API to transcribe audio spoken into the default microphone."
-        }
+          "audioRecordingReady": {
+            "id": "audioRecordingReady",
+            "title": "Audio recorded",
+            "description": "Raised when audio has been recorded.",
+            "properties": {
+              "audioRecording": {
+                "type": "string",
+                "title": "Audio recording",
+                "description": ""
+              }
+            }
+          },
+          "ErrorMessageEvent": {
+            "id": "ErrorMessageEvent",
+            "title": "Error message received",
+            "description": "",
+            "properties": {
+              "ErrorMessage": {
+                "type": "string",
+                "title": "Error message",
+                "description": "The error message received from OpenAI"
+              }
+            }
+          }
+        },
+        "if.interfaceAsset": true,
+        "if.templateDesignAccelerator": "WhisperNET.dax",
+        "title": "Whisper - Player on Windows",
+        "description": "Use the OpenAI Whisper model and OpenAI Audio API to transcribe audio spoken into the default microphone."
+      }
     }
 }
