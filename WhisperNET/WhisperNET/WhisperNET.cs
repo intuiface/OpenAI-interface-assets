@@ -1,4 +1,4 @@
-﻿using NAudio.Wave;
+using NAudio.Wave;
 using Newtonsoft.Json;
 using System;
 using System.ComponentModel;
@@ -32,7 +32,7 @@ namespace WhisperNET
         private string _openAIKey;
         private WaveInEvent waveSource = null;
         private WaveFileWriter waveFile = null;
-        private string tempFileName = "tempAudio.wav";
+        private string tempFileName;
 
         #endregion
 
@@ -87,6 +87,7 @@ namespace WhisperNET
                 waveSource.DataAvailable += new EventHandler<WaveInEventArgs>(WaveSource_DataAvailable);
                 waveSource.RecordingStopped += new EventHandler<StoppedEventArgs>(WaveSource_RecordingStopped);
 
+                tempFileName = Path.GetTempFileName();
                 waveFile = new WaveFileWriter(tempFileName, waveSource.WaveFormat);
 
                 waveSource.StartRecording();
