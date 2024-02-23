@@ -411,7 +411,7 @@
             </Typeface>
           </Property>
           <Property Type="Visual" Name="FontColor"><![CDATA[value:#FF333333]]></Property>
-          <Property Type="Domain" Name="Text"><![CDATA[value:Whisper - Player on other Platforms]]></Property>
+          <Property Type="Domain" Name="Text"><![CDATA[value:Whisper - Player on Windows]]></Property>
           <Property Type="Visual" Name="Bold"><![CDATA[value:False]]></Property>
           <Property Type="Visual" Name="FontSize"><![CDATA[value:20]]></Property>
           <Property Type="Visual" Name="Alignment"><![CDATA[value:Left]]></Property>
