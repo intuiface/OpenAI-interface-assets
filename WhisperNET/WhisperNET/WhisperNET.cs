@@ -87,7 +87,7 @@ namespace WhisperNET
                 waveSource.DataAvailable += new EventHandler<WaveInEventArgs>(WaveSource_DataAvailable);
                 waveSource.RecordingStopped += new EventHandler<StoppedEventArgs>(WaveSource_RecordingStopped);
 
-                tempFileName = Path.GetTempFileName();
+                tempFileName = Path.GetTempFileName().Replace(".tmp", ".wav"); ;
                 waveFile = new WaveFileWriter(tempFileName, waveSource.WaveFormat);
 
                 waveSource.StartRecording();
