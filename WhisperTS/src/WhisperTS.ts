@@ -138,7 +138,7 @@ export class WhisperTS extends IntuifaceElement {
         validate: true
     })
     public startRecording(): void {
-        if (this.rec == undefined) {
+        if (this.rec == null) {
             this.errorReceived('The recording can\'t be started');
             return;
         }
@@ -231,17 +231,22 @@ export class WhisperTS extends IntuifaceElement {
             body: formData
         };
 
-        const rawResponse = await fetch(req, opts);
+        try {
+            const rawResponse = await fetch(req, opts);
 
-        const json = await rawResponse.json();
+            const json = await rawResponse.json();
 
-        //Catch error response from API 
-        if (rawResponse.status != 200) {
-            this.errorReceived(json.error.message);
-            return null;
+            //Catch error response from API 
+            if (rawResponse.status != 200) {
+                this.errorReceived(json.error.message);
+                return null;
+            }
+
+            this.transcriptionReceived(json.text);
+        } catch (error) {
+            //catch an error if the Fetch failed.
+            this.errorReceived(error.message);
         }
-
-        this.transcriptionReceived(json.text);
     }
 
 
