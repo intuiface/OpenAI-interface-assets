@@ -5,6 +5,8 @@ import { Action, Asset, IntuifaceElement, Parameter, Property, Trigger } from '@
  */
 @Asset({
     name: 'VisionTS',
+    displayName: 'Vision - Player on all other platforms',
+    description: 'Use an OpenAI GPT model and OpenAI Chat Completion API to generate a detailed description of any image.',
     category: 'OpenAI',
     behaviors: [],
 })
@@ -71,12 +73,13 @@ export class VisionTS extends IntuifaceElement {
     //#region Actions
 
     @Action({
-        displayName: 'Analyze Image'
+        displayName: 'Analyze image'
     })
     public async analyzeImage(
         @Parameter({
             name: 'model',
             displayName: 'Model',
+            description: 'OpenAI model',
             defaultValue: 'gpt-4-vision-preview',
             type: String
         })
@@ -90,7 +93,7 @@ export class VisionTS extends IntuifaceElement {
         @Parameter({
             name: 'image',
             displayName: 'Image',
-            description: 'This field can either be an Image URL, a local image file path or a base64 string',
+            description: 'This field can either contain an image URL, a local image file path, or a base64 string.',
             type: String
         })
         image: string,
