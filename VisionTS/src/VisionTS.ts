@@ -226,7 +226,7 @@ export class VisionTS extends IntuifaceElement {
                 const reader = new FileReader();
                 reader.onloadend = () => {
                     const base64data = reader.result as string;
-                    console.error(base64data); // Output the Base64 string to the console
+                    //console.error(base64data); // Output the Base64 string to the console
                     resolve(base64data);
                 };
                 reader.onerror = () => reject(new Error('Failed to read the blob as Base64'));
