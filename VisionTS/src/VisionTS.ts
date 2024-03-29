@@ -72,6 +72,15 @@ export class VisionTS extends IntuifaceElement {
 
     //#region Actions
 
+    /**
+     * Main action of this IA, sends an image and a prompt to be analyzed to OpenAI.
+     * @param model The OpenAI model to use.
+     * @param prompt The prompt to use, ex "what do you see in this image?"
+     * @param image The image which can be a local file path, an online URL or a base64 encoded image.
+     * @param tokens The maximum number of OpenAI tokens to use to process this request.
+     * @param detail The detail level to use for the image analysis.
+     * @returns 
+     */
     @Action({
         displayName: 'Analyze image'
     })
@@ -131,8 +140,7 @@ export class VisionTS extends IntuifaceElement {
             };
         } else {
 
-            //second, check if image is a local file path or already a base64 image content. 
-            //NOTE: improve / double-check that code
+            //Second, check if image is a local file path or already a base64 image content.             
             let base64Image;
             if (this.isBase64EncodedImage(image)) {
                 //if the input is already a base64 encoded image, just use it. 
@@ -156,6 +164,7 @@ export class VisionTS extends IntuifaceElement {
             };
         }
 
+        //build message array (1 element only) with the prompt and image to send
         const messages = [
             {
                 role: "user",
@@ -184,6 +193,7 @@ export class VisionTS extends IntuifaceElement {
                 })
             });
 
+            //Process the response and raise a reponseReceived trigger.
             const data = await response.json();
             if (data && data.choices && data.choices.length > 0) {
                 this.responseReceived(data.choices[0].message.content);
@@ -201,11 +211,21 @@ export class VisionTS extends IntuifaceElement {
 
     //#region Private Methods / Helpers
 
+    /**
+     * Helper function to define if a path is a Web URL or not.
+     * @param imagePath the path to analyze.
+     * @returns true if the path is a URL, false if it's not.
+     */
     private isImageUrl(imagePath: string): boolean {
         //Check if the imagePath starts with http or https, but is not a local server URL (case of Electron)
         return (imagePath.startsWith('http://') || imagePath.startsWith('https://')) && (!imagePath.startsWith('http://localhost'));
     }
 
+    /**
+     * Helper function to analyze if a string (path) is a base64 encoded image.
+     * @param str the string to analyze.
+     * @returns true if it's a base64 image, false if it's not.
+     */
     private isBase64EncodedImage(str: string): boolean {
         // Regular expression to check if the string is a Base64 encoded image
         // This regex checks for the starting data:image MIME type, followed by optional charset definition,
@@ -215,6 +235,11 @@ export class VisionTS extends IntuifaceElement {
         return regex.test(str);
     }
 
+    /**
+     * Helper function to convert a local image path into a base64 image.
+     * @param imagePath the path of the image to convert.
+     * @returns a string that contains the base64 encoded image.
+     */
     private async convertImageToBase64(imagePath: string): Promise<string | null> {
         try {
 
