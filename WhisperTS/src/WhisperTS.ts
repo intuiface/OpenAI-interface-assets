@@ -1,4 +1,5 @@
-import { Action, Asset, IntuifaceElement, Parameter, Property, Trigger } from '@intuiface/core';
+import { Action, Asset, IntuifaceElement, Parameter, Property, SystemInfoService, Trigger } from '@intuiface/core';
+import UAParser from 'ua-parser-js';
 
 /**
  * Custom Interface Asset WhisperTS
@@ -43,8 +44,14 @@ export class WhisperTS extends IntuifaceElement {
     private audioChunks: any = [];
     private rec: MediaRecorder;
     //user agent info to determine if we are on iOS or not (installed Player or in Safari browser)
-    private _userAgent: string = navigator.userAgent || navigator.vendor || (window as any).opera;
-    private isiOS =  /Macintosh|iPad|iPhone|iPod/.test(this._userAgent) && !(window as any).MSStream;    
+    //private _userAgent: string = navigator.userAgent || navigator.vendor || (window as any).opera;
+    //private isiOS =  /Macintosh|iPad|iPhone|iPod/.test(this._userAgent) && !(window as any).MSStream;    
+
+    private parser = new UAParser(navigator.userAgent);
+    private isSafari = this.parser.getBrowser().name.includes('Safari') || this.parser.getBrowser().name.includes('WebKit'); 
+
+    private isiOS = false;
+    private osInitialized = false;
 
     //#region Constructor
     /**
@@ -138,7 +145,13 @@ export class WhisperTS extends IntuifaceElement {
         description: 'Start recording audio through the device’s default microphone.',
         validate: true
     })
-    public startRecording(): void {
+    public async startRecording(): Promise<void> {
+
+        if (!this.osInitialized){
+            this.isiOS = (await (SystemInfoService as any).getInstance().getOS() == 'iOS');
+            this.osInitialized = true;
+        }
+
         if (this.rec == null) {
             this.errorReceived('The recording can\'t be started');
             return;
@@ -148,7 +161,7 @@ export class WhisperTS extends IntuifaceElement {
 
         this.audioChunks = [];
         
-        if (this.isiOS)
+        if (this.isSafari || this.isiOS)
             this.rec.start(1000);
         else
             this.rec.start();
@@ -200,7 +213,7 @@ export class WhisperTS extends IntuifaceElement {
             }
             // if safari browser then use the mimeType of the MediaRecorder
             // otherwise for the audio/wav
-            const mimeType = this.isiOS ? this.rec.mimeType : 'audio/wav';
+            const mimeType = (this.isSafari || this.isiOS) ? this.rec.mimeType : 'audio/wav';
             // get the blob from chunks with the right type
             const audioBlob = new Blob(this.audioChunks, { type: mimeType });
             // Raise trigger to provide access to audio recording
