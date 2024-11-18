@@ -89,7 +89,7 @@ export class VisionTS extends IntuifaceElement {
             name: 'model',
             displayName: 'Model',
             description: 'OpenAI model',
-            defaultValue: 'gpt-4-vision-preview',
+            defaultValue: 'gpt-4o',
             type: String
         })
         model: string,
