@@ -1,4 +1,5 @@
-import { Action, Asset, IntuifaceElement, Parameter, Property, Trigger } from '@intuiface/core';
+import { Action, Asset, IntuifaceElement, Parameter, Property, SystemInfoService, Trigger } from '@intuiface/core';
+import UAParser from 'ua-parser-js';
 
 /**
  * Custom Interface Asset WhisperTS
@@ -24,7 +25,6 @@ export class WhisperTS extends IntuifaceElement {
     })
     public apiKey: string = '';
 
-
     /**
     * Language
     */
@@ -38,10 +38,20 @@ export class WhisperTS extends IntuifaceElement {
     // })
     // public language: string = '';
 
+   
     //#endregion Public Properties
 
     private audioChunks: any = [];
     private rec: MediaRecorder;
+    //user agent info to determine if we are on iOS or not (installed Player or in Safari browser)
+    //private _userAgent: string = navigator.userAgent || navigator.vendor || (window as any).opera;
+    //private isiOS =  /Macintosh|iPad|iPhone|iPod/.test(this._userAgent) && !(window as any).MSStream;    
+
+    private parser = new UAParser(navigator.userAgent);
+    private isSafari = this.parser.getBrowser().name.includes('Safari') || this.parser.getBrowser().name.includes('WebKit'); 
+
+    private isiOS = false;
+    private osInitialized = false;
 
     //#region Constructor
     /**
@@ -68,8 +78,6 @@ export class WhisperTS extends IntuifaceElement {
             this.errorReceived('MediaDevices unavailable or permission was refused.')
         }
     }
-
-
 
     //#endregion Constructor
 
@@ -137,7 +145,13 @@ export class WhisperTS extends IntuifaceElement {
         description: 'Start recording audio through the device’s default microphone.',
         validate: true
     })
-    public startRecording(): void {
+    public async startRecording(): Promise<void> {
+
+        if (!this.osInitialized){
+            this.isiOS = (await (SystemInfoService as any).getInstance().getOS() == 'iOS');
+            this.osInitialized = true;
+        }
+
         if (this.rec == null) {
             this.errorReceived('The recording can\'t be started');
             return;
@@ -146,7 +160,11 @@ export class WhisperTS extends IntuifaceElement {
         console.log('Start Recording')
 
         this.audioChunks = [];
-        this.rec.start();
+        
+        if (this.isSafari || this.isiOS)
+            this.rec.start(1000);
+        else
+            this.rec.start();
     }
 
     @Action({
@@ -155,12 +173,11 @@ export class WhisperTS extends IntuifaceElement {
         validate: true
     })
     public stopRecording(): void {
-        if (this.rec == undefined) {
+        if (!this.rec) {
             this.errorReceived('The recording can\'t be stopped');
             return;
         }
-        console.log('Start Recording')
-
+        console.log('Stop Recording');
         this.rec.stop();
     }
     //#endregion Actions
@@ -171,9 +188,13 @@ export class WhisperTS extends IntuifaceElement {
     private handlerFunction(stream: any): void {
 
         this.rec = new MediaRecorder(stream);
+        // add an useless audio context to force keeping stream
+        const audioCtx = new AudioContext();
+        audioCtx.createMediaStreamSource(stream);
 
-        //keep stacking audio chunks while recording is on-going. 
+        //keep stacking audio chunks while recording is on-going.
         this.rec.ondataavailable = (event) => {
+            console.log(`On data Available : ${event.data.size}`);
             if (event.data.size > 0) {
                 this.audioChunks.push(event.data);
             }
@@ -181,31 +202,37 @@ export class WhisperTS extends IntuifaceElement {
 
         //add error management
         this.rec.onerror = (event: any) => {
-            this.errorReceived(`Error recording stream: ${event.error.name}`);
+            this.errorReceived(`Error recording stream: ${event.error.name as string}`);
         };
 
-        //when recording is finished, create the audio blob and send it to OpenAI API. 
+        //when recording is finished, create the audio blob and send it to OpenAI API.
         this.rec.onstop = () => {
-            const audioBlob = new Blob(this.audioChunks, { type: 'audio/wav' });
-
-            //Raise trigger to provide access to audio recording
-            this.audioRecordingReady(URL.createObjectURL(audioBlob));
-
-
+            if (this.audioChunks.length <= 0) {
+                this.errorReceived('Empty audio chunks');
+                return;
+            }
+            // if safari browser then use the mimeType of the MediaRecorder
+            // otherwise for the audio/wav
+            const mimeType = (this.isSafari || this.isiOS) ? this.rec.mimeType : 'audio/wav';
+            // get the blob from chunks with the right type
+            const audioBlob = new Blob(this.audioChunks, { type: mimeType });
+            // Raise trigger to provide access to audio recording
+            const audioURL = URL.createObjectURL(audioBlob);
+            this.audioRecordingReady(audioURL);
 
             const reader = new FileReader();
             reader.onloadend = () => {
-                const audioFile = new File([reader.result], 'audio.wav', { type: 'audio/wav' });
+                // get the file from the mime type
+                const filename = `audio.${mimeType.replace('audio/', '')}`;
+                // create a file to send to openAI
+                const audioFile = new File([reader.result], filename, { type: mimeType });
                 // Use the audio file as needed
-                console.log(audioFile);
-                this.sendToOpenAI(audioFile);
+                void this.sendToOpenAI(audioFile);
             };
 
             reader.readAsArrayBuffer(audioBlob);
-
             this.audioChunks = [];
         };
-
 
     }
 
