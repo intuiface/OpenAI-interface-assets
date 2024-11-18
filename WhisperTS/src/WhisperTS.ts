@@ -6,7 +6,7 @@ import UAParser from 'ua-parser-js';
  */
 @Asset({
     name: 'WhisperTS',
-    displayName: 'Whisper - Player on all other platforms',
+    displayName: 'Whisper',
     description: 'Use the OpenAI Whisper model and OpenAI Audio API to transcribe audio spoken into the default microphone.',
     category: 'OpenAI',
     behaviors: [],

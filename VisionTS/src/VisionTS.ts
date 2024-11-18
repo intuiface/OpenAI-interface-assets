@@ -5,7 +5,7 @@ import { Action, Asset, IntuifaceElement, Parameter, Property, Trigger } from '@
  */
 @Asset({
     name: 'VisionTS',
-    displayName: 'Vision - Player on all other platforms',
+    displayName: 'Vision',
     description: 'Use an OpenAI GPT model and OpenAI Chat Completion API to generate a detailed description of any image.',
     category: 'OpenAI',
     behaviors: [],

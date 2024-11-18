@@ -6,7 +6,7 @@ import { Message } from './Message';
  */
 @Asset({
     name: 'ChatGPT4TS',
-    displayName: 'ChatGPT - Player on all other platforms',
+    displayName: 'ChatGPT',
     description: "Use an OpenAI GPT model and OpenAI Chat Completion API to process any prompt or sequence of prompts.",
     category: 'OpenAI',
     behaviors: [],
