@@ -72,8 +72,8 @@
   },
   "resources": {
     "ChatGPT4NET": {
-      "title": "ChatGPT - Player on Windows",
-      "description": "Use an OpenAI GPT model and OpenAI Chat Completion API to process any prompt or sequence of prompts.",
+      "title": "ChatGPT - Player Classic",
+      "description": "Use an OpenAI GPT model and OpenAI Chat Completion API to process any prompt or sequence of prompts. Only use this version with Player classic",
       "isInterfaceAsset": true,
       "if.templateDesignAccelerator": "ChatGPT4NET-default.dax",
       "methods": {

@@ -1,7 +1,7 @@
 {
     "version": "v1.0.1706199898460",
     "name": "WhisperNET",
-    "title": "Whisper - Player on Windows",
+    "title": "Whisper - Player Classic",
     "if.category": "OpenAI",
     "protocol": "dll",
     "basePath": "WhisperNET",
@@ -95,8 +95,8 @@
         },
         "if.interfaceAsset": true,
         "if.templateDesignAccelerator": "WhisperNET.dax",
-        "title": "Whisper - Player on Windows",
-        "description": "Use the OpenAI Whisper model and OpenAI Audio API to transcribe audio spoken into the default microphone."
+        "title": "Whisper - Player Classic",
+        "description": "Use the OpenAI Whisper model and OpenAI Audio API to transcribe audio spoken into the default microphone. Only use this version with Player classic"
       }
     }
 }
