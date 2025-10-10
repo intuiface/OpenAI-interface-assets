@@ -49,6 +49,7 @@ export class WhisperTS extends IntuifaceElement {
 
     private parser = new UAParser(navigator.userAgent);
     private isSafari = this.parser.getBrowser().name.includes('Safari') || this.parser.getBrowser().name.includes('WebKit'); 
+    private isTizen = navigator.userAgent.includes('Tizen')
 
     private isiOS = false;
     private osInitialized = false;
@@ -161,7 +162,7 @@ export class WhisperTS extends IntuifaceElement {
 
         this.audioChunks = [];
         
-        if (this.isSafari || this.isiOS)
+        if ((this.isSafari || this.isiOS) && !this.isTizen)
             this.rec.start(1000);
         else
             this.rec.start();
@@ -213,7 +214,7 @@ export class WhisperTS extends IntuifaceElement {
             }
             // if safari browser then use the mimeType of the MediaRecorder
             // otherwise for the audio/wav
-            const mimeType = (this.isSafari || this.isiOS) ? this.rec.mimeType : 'audio/wav';
+            const mimeType = ((this.isSafari || this.isiOS) && !this.isTizen) ? this.rec.mimeType : 'audio/wav';
             // get the blob from chunks with the right type
             const audioBlob = new Blob(this.audioChunks, { type: mimeType });
             // Raise trigger to provide access to audio recording
